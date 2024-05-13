@@ -3,7 +3,7 @@
         "_id": "1",
         "name": "item_1",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -11,7 +11,7 @@
         "_id": "2",
         "name": "item_2",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -19,7 +19,7 @@
         "_id": "3",
         "name": "item_3",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -27,7 +27,7 @@
         "_id": "4",
         "name": "item_4",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -35,7 +35,7 @@
         "_id": "5",
         "name": "item_5",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -43,7 +43,7 @@
         "_id": "6",
         "name": "item_6",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -51,7 +51,7 @@
         "_id": "7",
         "name": "item_7",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -59,7 +59,7 @@
         "_id": "8",
         "name": "item_8",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -67,7 +67,7 @@
         "_id": "9",
         "name": "item_9",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -75,7 +75,7 @@
         "_id": "10",
         "name": "item_10",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -83,7 +83,7 @@
         "_id": "11",
         "name": "item_11",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     },
@@ -91,7 +91,7 @@
         "_id": "12",
         "name": "item_12",
         "price": "0",
-        "imageUrl": "./img/",
+        "imageUrl": "img/",
         "description": "description de l'objet",
         "altTxt": "cet objet"
     }
