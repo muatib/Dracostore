@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dracostore</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
   </head>
 
   <body>
     <main>
       <div class="buy-container">
-        <div class="nav-container">
+       <nav class="nav-container">
           <ul>
             <li><img class="logo nav-img" src="/img/logo.png" alt="logo" /></li>
             <li>
@@ -36,16 +36,52 @@
               /></a>
             </li>
           </ul>
-        </div>
+        </nav>
+        
         <div class="container" id="item-container">
           <!-- LIst of items -->
         </div>
         <div class="cart" id="cart">
-          <h2>Panier</h2>
+            <h1>Informations clients</h1>
+            <div class="order">
+            <button class="order-btn">nouveau</button>
+            <input class="order-txt" type="text" placeholder="N° de commande">
+        </div>
+        
+
+<select class="customer" name="customer" id="customer-select">
+  <option value="">Nom client</option>
+  <option value="jack Sparrow">jack sparrow</option>
+  <option value="john Wick">john Wick</option>
+  <option value="Badmotherfucker">Badmotherfucker</option>
+  <option value="Jack the Reaper">Jack the Reaper</option>
+  <option value="Alberto de la Rosa">Alberto de la Rosa</option>
+  <option value="Sponger Bob">Sponger Bob</option>
+</select>
+          <h2 class="cart-txt">Articles</h2>
           <ul class="cart-lst" id="cart-list">
             <!-- list buy -->
           </ul>
-          <p id="total">Total : <span>0</span>po</p>
+          <ul class="price-container">
+            <li>
+                <p>Article(s)</p>
+            </li>
+            <li>
+                <p>TOTAL</p>
+            </li>
+            <li>
+                <p>dont TVA (13%)</p>
+            </li>
+            <li>
+                <p>Remise</p>
+            </li>
+          </ul>
+          <!-- <p id="total">Total : <span>0</span>po</p> -->
+          <div class="cart-container">
+            <button class="cart-btn">valider le panier</button>
+            <img class="cart-img" src="/img/supprimer.png" alt="supprimer">
+          </div>
+          <img class="cart-logo" src="/img/logo-nom.png" alt="">
         </div>
       </div>
     </main>

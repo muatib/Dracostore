@@ -70,7 +70,7 @@ html{
   height: 1024px;
 }
 
-#cart-list {
+.cart-lst {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -81,4 +81,67 @@ html{
 }
 .cart{
     background-color: var(--color1);
+}
+.order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-btn{
+    width: 6rem;
+    height: 3rem;
+    text-transform: uppercase;
+    background-color: var(--color5);
+    color: white;
+  margin: 1rem 0 0.9rem 0.5rem;
+ 
+
+}
+.order-txt{
+    width: 16rem;
+    height: 3rem;
+    background-color: var(--color1);
+    text-align: center;
+    // margin-bottom: 0.5rem;
+    border: black 3px solid;
+}
+.customer{
+    width: 24rem;
+    height: 3rem;
+    background-color: var(--color1);
+    margin-left: 0.5rem;
+    border: black 3px solid;
+}
+.cart-txt{
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+}
+.price-container{
+    background-color: var(--color2);
+    color: white;
+    line-height: 2rem;
+    padding: 0.5rem;
+}
+.cart-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.cart-btn{
+    height: 4rem;
+    width: 17rem;
+    background-color: var(--color5);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.cart-img{
+   height: 4rem;
+}
+.cart-logo{
+    width: 265px;
+    height: 80px;
+    margin: 2.5rem 0 0 4rem;
 }
