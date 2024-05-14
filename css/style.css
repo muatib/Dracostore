@@ -31,14 +31,29 @@ a {
   font-weight: 400;
   src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
 }
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+html {
+  background-color: var(--color2);
+}
+
 .buy-container {
   display: grid;
-  grid-template-columns: 0.5fr 3fr 1fr;
+  grid-template-columns: 8% 62% 30%;
 }
 
 .nav-container {
   background-color: var(--color1);
-  width: 3.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+}
+.nav-container .nav-img {
+  margin-top: 3rem;
 }
 
 .price {
@@ -48,10 +63,9 @@ a {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 44, 875rem;
-  margin: auto;
+  gap: 3rem;
   background-color: var(--color2);
+  margin: 3rem;
 }
 
 .item {
@@ -60,7 +74,7 @@ a {
 }
 
 .item img {
-  width: 20.625rem;
+  width: 330px;
   height: 20.625rem;
   border-radius: 20px;
 }
@@ -83,10 +97,11 @@ a {
   bottom: -20px;
 }
 
-#cart {
+.cart {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  height: 1024px;
 }
 
 #cart-list {
@@ -95,6 +110,14 @@ a {
   margin: 0;
 }
 
-#cart-list li {
+.cart-lst li {
   margin-bottom: 5px;
+}
+
+.cart {
+  background-color: var(--color1);
+}
+
+.logo {
+  width: 50px;
 }/*# sourceMappingURL=style.css.map */
