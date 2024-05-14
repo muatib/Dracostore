@@ -6,15 +6,9 @@
   margin: 0;
 }
 
-:root {
-  --color1: #fefad4;
-  --color2: #30303c;
-  --color3: #f69a60;
-  --color4: #403686;
-  --color5: #6F3713;
-  --color6: #000000;
-  font-family: "Lancelot";
-  font-size: 16px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -31,41 +25,77 @@ a {
   font-weight: 400;
   src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
 }
-body {
-  max-width: 1440px;
-  margin: auto;
+:root {
+  --color1: #fefad4;
+  --color2: #30303c;
+  --color3: #f69a60;
+  --color4: #403686;
+  --color5: #6F3713;
+  --color6: #000000;
+  font-family: "Lancelot";
+  font-size: 16px;
+}
+
+.coin-gold {
+  background-image: url("/img/or.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.coin-silver {
+  background-image: url("/img/silver.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.ico-moins {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  border-color: #000000;
+  height: 20px;
+  width: 20px;
+}
+
+.ico-plus {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  border-color: #000000;
+  height: 20px;
+  width: 20px;
+}
+
+.article-li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-name {
+  margin-right: auto;
+}
+
+.quantity {
+  margin: 0 1rem;
 }
 
 html {
   background-color: var(--color2);
 }
 
-.buy-container {
+.shop-container {
   display: grid;
-  grid-template-columns: 8% 62% 30%;
+  grid-template-columns: 5% 75% 20%;
 }
 
-.nav-container {
-  background-color: var(--color1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 1024px;
-}
-.nav-container .nav-img {
-  margin-top: 3rem;
+.shop-card {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  gap: 6rem;
+  background-color: var(--color2);
+  margin: 3rem 7rem 7rem 7rem;
 }
 
 .price {
   font-weight: bold;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  background-color: var(--color2);
-  margin: 3rem;
 }
 
 .item {
@@ -74,8 +104,8 @@ html {
 }
 
 .item img {
-  width: 330px;
-  height: 20.625rem;
+  width: 350px;
+  height: 350px;
   border-radius: 20px;
 }
 
@@ -97,25 +127,61 @@ html {
   bottom: -20px;
 }
 
-.cart {
+.nav-container {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+  position: sticky;
+  top: 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.nav-logo {
+  width: 60px;
+  margin: 3rem 0 0 1.5rem;
+}
+
+.nav-img1,
+.nav-img2,
+.nav-img3 {
+  margin-top: 3rem;
+  padding: 1.5rem;
+}
+
+.nav-img1:hover {
+  background-image: url(/img/caissehover.jpg);
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.cart-container {
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   height: 1024px;
+  background-color: var(--color1);
+  position: sticky;
+  top: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
 }
 
 .cart-lst {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 380px;
 }
 
 .cart-lst li {
   margin-bottom: 5px;
 }
 
-.cart {
-  background-color: var(--color1);
+.cart-txt {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-left: 0.5rem;
 }
 
 .order {
@@ -138,6 +204,7 @@ html {
   height: 3rem;
   background-color: var(--color1);
   text-align: center;
+  margin-right: 5rem;
   border: black 3px solid;
 }
 
@@ -149,27 +216,14 @@ html {
   border: black 3px solid;
 }
 
-.cart-txt {
-  font-size: 2rem;
-  margin-top: 3rem;
-  margin-left: 0.5rem;
-}
-
-.price-container {
-  background-color: var(--color2);
-  color: white;
-  line-height: 2rem;
-  padding: 0.5rem;
-}
-
-.cart-container {
+.valid-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
 
-.cart-btn {
+.valid-btn {
   height: 4rem;
   width: 17rem;
   background-color: var(--color5);
@@ -178,17 +232,19 @@ html {
   font-size: 1.5rem;
 }
 
-.cart-img {
+.valid-img {
   height: 4rem;
 }
 
-.cart-logo {
+.valid-logo {
   width: 265px;
   height: 80px;
-  margin: 2.5rem 0 0 4rem;
+  margin: 2.5rem 0 0 7rem;
 }
 
-.logo {
-  width: 50px;
-  margin-left: 0.5rem;
+.price-container {
+  background-color: var(--color2);
+  color: white;
+  line-height: 2rem;
+  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

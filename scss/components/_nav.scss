@@ -1,0 +1,29 @@
+.nav-container {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+  position: sticky;
+  top: 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+.nav-logo {
+  width: 60px;
+  margin: 3rem 0 0 1.5rem;
+}
+.nav-img1,
+.nav-img2,
+.nav-img3 {
+  margin-top: 3rem;
+  
+  padding: 1.5rem;
+
+}
+.nav-img1:hover{
+ 
+background-image: url(/img/caissehover.jpg);
+background-size: cover;
+transition: 0.5s ease-in-out;
+z-index: 1000;
+}

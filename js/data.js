@@ -19,12 +19,12 @@ function loadItems() {
 
                 const price = document.createElement('div');
                 price.classList.add('price');
-                price.textContent = item.gold + " po" + item.silver + "siv";
+                price.textContent = item.gold + " Or " + item.silver + " Ar";
 
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.altTxt;
-                
+
                 img.addEventListener('click', function () {
                     addPanier(item);
                 });
@@ -57,15 +57,18 @@ function addPanier(article) {
         }
     } else {
         const listItem = document.createElement('li');
+        listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
 
         const itemName = document.createElement('span');
-        itemName.textContent = article.name + " - " + article.gold + " po";
+        itemName.classList.add('article-name');
+        itemName.textContent = article.name + " - " + article.gold + " Or " + " et " +  article.silver + " Ar ";
 
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
+        decreaseButton.classList.add('ico-moins');
         decreaseButton.addEventListener('click', function () {
-            decrease(listItem, article.gold);
+            decrease(listItem, article.gold, article.silver);
         });
 
         const quantityDisplay = document.createElement('span');
@@ -74,14 +77,15 @@ function addPanier(article) {
 
         const increaseButton = document.createElement('button');
         increaseButton.textContent = "+";
+        increaseButton.classList.add('ico-plus');
         increaseButton.addEventListener('click', function () {
-            increaseQuantity(listItem, article.quantité, article.gold);
+            increaseQuantity(listItem, article.quantité, article.gold, article.sivler);
         });
 
+        listItem.appendChild(itemName);
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
-        listItem.appendChild(itemName);
         cartList.appendChild(listItem);
 
         UpdateTotalCart(); // Total Cart

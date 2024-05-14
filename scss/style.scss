@@ -1,4 +1,8 @@
-@import '_reset';
-@import '_var';
-@import '_utils';
-@import '_main';
+@import "_reset";
+@import "_var";
+@import "_utils";
+
+
+@import "components/card";
+@import "components/nav";
+@import "components/cart";
