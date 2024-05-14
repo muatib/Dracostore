@@ -1,98 +1,110 @@
 [
     {
         "_id": "1",
-        "name": "item_1",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Bague elfe",
+        "price": "20",
+        "imageUrl": "img/bague-elfe.jpg",
+        "description": "Bague elfe",
+        "altTxt": "Bague elfe",
+        "quantité": "20"
     },
     {
         "_id": "2",
-        "name": "item_2",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Bague Templier",
+        "price": "20",
+        "imageUrl": "img/bague-templier.jpg",
+        "description": "Bague Templier",
+        "altTxt": "Bague Templier",
+        "quantité": "20"
     },
     {
         "_id": "3",
-        "name": "item_3",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "boussole",
+        "price": "50",
+        "imageUrl": "img/boussole.jpg",
+        "description": "boussole",
+        "altTxt": "boussole",
+        "quantité": "20"
     },
     {
         "_id": "4",
-        "name": "item_4",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Buste d'Odin",
+        "price": "50",
+        "imageUrl": "img/buste-odin.jpg",
+        "description": "Buste d'Odin",
+        "altTxt": "Buste d'Odin",
+        "quantité": "20"
     },
     {
         "_id": "5",
-        "name": "item_5",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Chandelle",
+        "price": "15",
+        "imageUrl": "img/chandelle-grande.jpg",
+        "description": "Grande chandelle",
+        "altTxt": "Grande chandelle",
+        "quantité": "20"
     },
     {
         "_id": "6",
-        "name": "item_6",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Choppe crâne",
+        "price": "35",
+        "imageUrl": "img/choppe-crane.jpg",
+        "description": "Choppe en forme de crâne",
+        "altTxt": "Choppe en forme de crâne",
+        "quantité": "20"
     },
     {
         "_id": "7",
-        "name": "item_7",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Coffret Dragon",
+        "price": "30",
+        "imageUrl": "img/coffret-dragon.jpg",
+        "description": "Coffret dragon",
+        "altTxt": "Coffret dragon",
+        "quantité": "20"
     },
     {
         "_id": "8",
-        "name": "item_8",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Boucles d'Oreilles",
+        "price": "20",
+        "imageUrl": "img/dragonflight-earrings.jpg",
+        "description": "Boucles d'Oreilles",
+        "altTxt": "Boucles d'Oreilles",
+        "quantité": "20"
     },
     {
         "_id": "9",
-        "name": "item_9",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Figurine elfe et sa licorne",
+        "price": "40",
+        "imageUrl": "img/elfe-licorne.jpeg",
+        "description": "Figurine elfe et sa licorne",
+        "altTxt": "Figurine elfe et sa licorne",
+        "quantité": "20"
     },
     {
         "_id": "10",
-        "name": "item_10",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Horloge dragon",
+        "price": "70",
+        "imageUrl": "img/horloge-dragon.jpg",
+        "description": "Horloge dragon",
+        "altTxt": "Horloge dragon",
+        "quantité": "20"
     },
     {
         "_id": "11",
-        "name": "item_11",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Coffre à bijoux",
+        "price": "30",
+        "imageUrl": "img/oeil-dragon.jpg",
+        "description": "Coffre à bijoux",
+        "altTxt": "Coffre à bijoux",
+        "quantité": "20"
     },
     {
         "_id": "12",
-        "name": "item_12",
-        "price": "0",
-        "imageUrl": "img/",
-        "description": "description de l'objet",
-        "altTxt": "cet objet"
+        "name": "Pendentif dragon",
+        "price": "25",
+        "imageUrl": "img/pendentif-dragon.jpg",
+        "description": "Pendentif dragon",
+        "altTxt": "Pendentif dragon",
+        "quantité": "20"
     }
 ]

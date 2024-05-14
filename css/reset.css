@@ -1,1 +1,24 @@
 /*# sourceMappingURL=reset.css.map */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color1: #fefad4;
+  --color2: #30303c;
+  --color3: #f69a60;
+  --color4: #403686;
+  --color5: #6F3713;
+  /* --font-family: ; */
+  font-size: 16px;
+}
+
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
