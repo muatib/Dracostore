@@ -1,66 +1,84 @@
-.buy-container{
-    display: grid;
-    grid-template-columns: .5fr 3fr 1fr;
+body{
+    max-width: 1440px;
+    margin: auto;
+    
 }
-.nav-container{
-    background-color: var(--color1);
-    width: 3.375rem;
+html{
+    background-color: var(--color2);
+}
+.buy-container {
+  display: grid;
+  grid-template-columns: 8% 62% 30%;
+}
+.nav-container {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+
+
+  .nav-img{
+    margin-top: 3rem;
+  }
 }
 
 .price {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 44,875rem;
-    margin: auto;
-    background-color: var(--color2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  background-color: var(--color2);
+  margin: 3rem ;
 }
 
 .item {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 }
 
 .item img {
-    width: 20.625rem;
-    height: 20.625rem;
-    border-radius: 20px;
+  width: 330px;
+  height: 20.625rem;
+  border-radius: 20px;
 }
 
 .item .name,
 .item .price {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 20px;
-    height: 5rem;
-    width: 20.625rem;
-    margin-bottom: 1.5rem;
-    color: var(--color6);
-    font-size: 1.75rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  color: var(--color6);
+  font-size: 1.75rem;
 }
 .item .price {
-    bottom: -20px;
+  bottom: -20px;
 }
 
-
-#cart {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.cart {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 1024px;
 }
 
 #cart-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-#cart-list li {
-    margin-bottom: 5px;
+.cart-lst li {
+  margin-bottom: 5px;
+}
+.cart{
+    background-color: var(--color1);
 }
