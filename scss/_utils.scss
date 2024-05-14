@@ -13,7 +13,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 700px;
     margin: auto;
@@ -36,9 +36,9 @@
 .item .price {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 35%;
     transform: translateX(-50%);
-    background-color: var(--color1);
+    // background-color: var(--color1);
     border-radius: 20px;
     height: 5rem;
     width: 13.25rem;

@@ -41,11 +41,11 @@ function loadItems() {
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
 }
 
-// Add quantity to panier
+// Add quantity to cart
 function addPanier(article) {
     const cartList = document.getElementById('cart-list');
 
-    // Show items in panier
+    // Show items in cart
     const existingItem = cartList.querySelector(`[data-id="${article._id}"]`);
     if (existingItem) {
         const quantityDisplay = existingItem.querySelector('.quantity');
@@ -53,7 +53,7 @@ function addPanier(article) {
         const availableQuantity = parseInt(article.quantité);
         if (quantity < availableQuantity) {
             quantityDisplay.textContent = quantity + 1;
-            mettreAJourTotalPanier();
+            UpdateTotalCart();
         } else {
             alert("La quantité disponible pour cet article est épuisée.");
         }
@@ -67,7 +67,7 @@ function addPanier(article) {
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
         decreaseButton.addEventListener('click', function () {
-            diminuerQuantite(listItem, article.price);
+            decrease(listItem, article.price);
         });
 
         const quantityDisplay = document.createElement('span');
@@ -77,7 +77,7 @@ function addPanier(article) {
         const increaseButton = document.createElement('button');
         increaseButton.textContent = "+";
         increaseButton.addEventListener('click', function () {
-            augmenterQuantite(listItem, article.quantité, article.price);
+            increaseQuantity(listItem, article.quantité, article.price);
         });
 
         listItem.appendChild(decreaseButton);
@@ -86,27 +86,27 @@ function addPanier(article) {
         listItem.appendChild(itemName);
         cartList.appendChild(listItem);
 
-        mettreAJourTotalPanier(); // Total panier
+        UpdateTotalCart(); // Total Cart
     }
 }
 
 // Dicrease quantity in panier
-function diminuerQuantite(listItem, price) {
+function decrease(listItem, price) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity > 1) { // Not quantity negative
         quantityDisplay.textContent = quantity - 1;
-        mettreAJourTotalPanier();
+        UpdateTotalCart();
     }
 }
 
 // Add quantity in panier
-function augmenterQuantite(listItem, availableQuantity, price) {
+function increaseQuantity(listItem, availableQuantity, price) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity < availableQuantity) {
         quantityDisplay.textContent = quantity + 1;
-        mettreAJourTotalPanier();
+        UpdateTotalCart();
     } else {
         alert("La quantité disponible pour cet article est épuisée.");
     }

@@ -12,7 +12,7 @@
   --color3: #f69a60;
   --color4: #403686;
   --color5: #6F3713;
-  /* --font-family: ; */
+  font-family: 'Lancelot';
   font-size: 16px;
 }
 
@@ -20,4 +20,13 @@ ul,
 a {
   list-style-type: none;
   text-decoration: none;
+}
+
+/* lancelot-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lancelot';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lancelot-v26-latin-regular.woff2') format('woff2');
 }

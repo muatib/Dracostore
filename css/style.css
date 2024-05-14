@@ -12,7 +12,7 @@
   --color3: #f69a60;
   --color4: #403686;
   --color5: #6F3713;
-  /* --font-family: ; */
+  font-family: "Lancelot";
   font-size: 16px;
 }
 
@@ -22,6 +22,14 @@ a {
   text-decoration: none;
 }
 
+/* lancelot-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lancelot";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
+}
 .buy-container {
   display: grid;
   grid-template-columns: 0.5fr 3fr 1fr;
@@ -38,7 +46,7 @@ a {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 700px;
   margin: auto;
@@ -61,9 +69,8 @@ a {
 .item .price {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 35%;
   transform: translateX(-50%);
-  background-color: var(--color1);
   border-radius: 20px;
   height: 5rem;
   width: 13.25rem;
