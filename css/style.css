@@ -32,7 +32,6 @@ a {
   src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
 }
 body {
-  max-width: 1440px;
   margin: auto;
 }
 
@@ -52,7 +51,8 @@ html {
   align-items: center;
   height: 1024px;
 }
-.nav-container .nav-img {
+
+.nav-img {
   margin-top: 3rem;
 }
 
@@ -61,8 +61,9 @@ html {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
   background-color: var(--color2);
   margin: 3rem;
@@ -93,6 +94,10 @@ html {
   font-size: 1.75rem;
 }
 
+.item .price::after {
+  background-image: url("img/or.png");
+}
+
 .item .price {
   bottom: -20px;
 }
@@ -102,6 +107,7 @@ html {
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 1024px;
+  background-color: var(--color1);
 }
 
 .cart-lst {
@@ -113,10 +119,6 @@ html {
 
 .cart-lst li {
   margin-bottom: 5px;
-}
-
-.cart {
-  background-color: var(--color1);
 }
 
 .order {

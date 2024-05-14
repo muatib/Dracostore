@@ -1,136 +1,147 @@
-body{
-  max-width: 1440px;
+body {
+  // max-width: 1440px;
   margin: auto;
-  
 }
-html{
+
+html {
   background-color: var(--color2);
 }
+
 .buy-container {
-display: grid;
-grid-template-columns: 8% 62% 30%;
+  display: grid;
+  grid-template-columns: 8% 62% 30%;
 }
+
 .nav-container {
-background-color: var(--color1);
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 1024px;
-
-
-.nav-img{
-  margin-top: 3rem;
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
 }
+
+.nav-img {
+  margin-top: 3rem;
 }
 
 .price {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .container {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 3rem;
-background-color: var(--color2);
-margin: 3rem ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--color2);
+  margin: 3rem;
 }
 
 .item {
-text-align: center;
-position: relative;
+  text-align: center;
+  position: relative;
 }
 
 .item img {
-width: 330px;
-height: 20.625rem;
-border-radius: 20px;
+  width: 330px;
+  height: 20.625rem;
+  border-radius: 20px;
 }
 
 .item .name,
-.item .price {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-border-radius: 20px;
-height: 5rem;
-width: 20.625rem;
-margin-bottom: 1.5rem;
-color: var(--color6);
-font-size: 1.75rem;
+.item .price
+ {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  color: var(--color6);
+  font-size: 1.75rem;
 }
-.item .price {
-bottom: -20px;
+
+.item .price::after{
+  background-image: url("img/or.png");
+}
+
+.item .price{
+  bottom: -20px;
 }
 
 .cart {
-padding: 20px;
-border: 1px solid #ccc;
-border-radius: 5px;
-height: 1024px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 1024px;
+  background-color: var(--color1);
 }
 
 .cart-lst {
-list-style: none;
-padding: 0;
-margin: 0;
-height: 400px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 400px;
 }
 
 .cart-lst li {
-margin-bottom: 5px;
+  margin-bottom: 5px;
 }
-.cart{
-  background-color: var(--color1);
-}
-.order{
+
+.order {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.order-btn{
+
+.order-btn {
   width: 6rem;
   height: 3rem;
   text-transform: uppercase;
   background-color: var(--color5);
   color: white;
-margin: 1rem 0 0.9rem 0.5rem;
-
-
+  margin: 1rem 0 0.9rem 0.5rem;
 }
-.order-txt{
+
+.order-txt {
   width: 16rem;
   height: 3rem;
   background-color: var(--color1);
   text-align: center;
-  // margin-bottom: 0.5rem;
   border: black 3px solid;
 }
-.customer{
+
+.customer {
   width: 24rem;
   height: 3rem;
   background-color: var(--color1);
   margin-left: 0.5rem;
   border: black 3px solid;
 }
-.cart-txt{
+
+.cart-txt {
   font-size: 2rem;
   margin-top: 3rem;
   margin-left: 0.5rem;
 }
-.price-container{
+
+.price-container {
   background-color: var(--color2);
   color: white;
   line-height: 2rem;
   padding: 0.5rem;
 }
-.cart-container{
+
+.cart-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-.cart-btn{
+
+.cart-btn {
   height: 4rem;
   width: 17rem;
   background-color: var(--color5);
@@ -138,14 +149,17 @@ margin: 1rem 0 0.9rem 0.5rem;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
-.cart-img{
- height: 4rem;
+
+.cart-img {
+  height: 4rem;
 }
-.cart-logo{
+
+.cart-logo {
   width: 265px;
   height: 80px;
   margin: 2.5rem 0 0 4rem;
 }
+
 .coin-gold {
   background-image: url("/img/or.svg");
   width: 15px;
@@ -160,7 +174,7 @@ margin: 1rem 0 0.9rem 0.5rem;
 
 .ico-moins {
   border-radius: 50%;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   border-color: #000000;
   height: 20px;
   width: 20px;
@@ -168,7 +182,7 @@ margin: 1rem 0 0.9rem 0.5rem;
 
 .ico-plus {
   border-radius: 50%;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   border-color: #000000;
   height: 20px;
   width: 20px;
@@ -182,6 +196,7 @@ margin: 1rem 0 0.9rem 0.5rem;
 .article-name {
   margin-right: auto;
 }
-.quantity{
+
+.quantity {
   margin: 0 1rem;
 }
