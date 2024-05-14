@@ -12,6 +12,7 @@
   --color3: #f69a60;
   --color4: #403686;
   --color5: #6F3713;
+  --color6: #000000;
   font-family: "Lancelot";
   font-size: 16px;
 }
@@ -68,13 +69,14 @@ a {
 .item .price {
   position: absolute;
   bottom: 0;
-  left: 35%;
+  left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
   height: 5rem;
   width: 20.625rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: var(--color6);
+  font-size: 1.75rem;
 }
 
 .item .price {

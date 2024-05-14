@@ -35,13 +35,14 @@
 .item .price {
     position: absolute;
     bottom: 0;
-    left: 35%;
+    left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
     height: 5rem;
     width: 20.625rem;
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--color6);
+    font-size: 1.75rem;
 }
 .item .price {
     bottom: -20px;

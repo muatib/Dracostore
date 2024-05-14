@@ -19,22 +19,19 @@ function loadItems() {
 
                 const price = document.createElement('div');
                 price.classList.add('price');
-                price.textContent = item.price + " po";
+                price.textContent = item.gold + " po" + item.silver + "siv";
 
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.altTxt;
-
-                const addToCartButton = document.createElement('button');
-                addToCartButton.textContent = "Ajouter au panier";
-                addToCartButton.addEventListener('click', function () {
+                
+                img.addEventListener('click', function () {
                     addPanier(item);
                 });
 
                 article.appendChild(name);
                 article.appendChild(price);
                 article.appendChild(img);
-                article.appendChild(addToCartButton);
 
                 container.appendChild(article);
             });
@@ -63,12 +60,12 @@ function addPanier(article) {
         listItem.setAttribute('data-id', article._id);
 
         const itemName = document.createElement('span');
-        itemName.textContent = article.name + " - " + article.price + " po";
+        itemName.textContent = article.name + " - " + article.gold + " po";
 
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
         decreaseButton.addEventListener('click', function () {
-            decrease(listItem, article.price);
+            decrease(listItem, article.gold);
         });
 
         const quantityDisplay = document.createElement('span');
@@ -78,7 +75,7 @@ function addPanier(article) {
         const increaseButton = document.createElement('button');
         increaseButton.textContent = "+";
         increaseButton.addEventListener('click', function () {
-            increaseQuantity(listItem, article.quantité, article.price);
+            increaseQuantity(listItem, article.quantité, article.gold);
         });
 
         listItem.appendChild(decreaseButton);
