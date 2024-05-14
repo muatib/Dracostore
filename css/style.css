@@ -1,19 +1,98 @@
-* {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color1: #fefad4;
+  --color2: #30303c;
+  --color3: #f69a60;
+  --color4: #403686;
+  --color5: #6F3713;
+  font-family: "Lancelot";
+  font-size: 16px;
+}
+
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* lancelot-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lancelot";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
+}
+.buy-container {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1fr;
+}
+
+.nav-container {
+  background-color: var(--color1);
+  width: 3.375rem;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 44, 875rem;
+  margin: auto;
+  background-color: var(--color2);
+}
+
+.item {
+  text-align: center;
+  position: relative;
+}
+
+.item img {
+  width: 20.625rem;
+  height: 20.625rem;
+  border-radius: 20px;
+}
+
+.item .name,
+.item .price {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.item .price {
+  bottom: -20px;
+}
+
+#cart {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cart-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-body {
-  font-size: 12px;
-}
-
-.logo {
-  width: 20px;
-}
-
-.icn {
-  width: 20px;
-}
-
-.img-itm {
-  width: 50px;
+#cart-list li {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */
