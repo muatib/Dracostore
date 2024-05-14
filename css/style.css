@@ -48,7 +48,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 700px;
+  width: 44, 875rem;
   margin: auto;
   background-color: var(--color2);
 }
@@ -59,10 +59,9 @@ a {
 }
 
 .item img {
-  width: 13.25rem;
-  height: 13.25rem;
+  width: 20.625rem;
+  height: 20.625rem;
   border-radius: 20px;
-  /* background-color: var(--color1); */
 }
 
 .item .name,
@@ -73,7 +72,7 @@ a {
   transform: translateX(-50%);
   border-radius: 20px;
   height: 5rem;
-  width: 13.25rem;
+  width: 20.625rem;
   margin-bottom: 1.5rem;
   color: white;
 }

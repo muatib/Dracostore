@@ -3,7 +3,7 @@
         "_id": "1",
         "name": "Bague elfe",
         "price": "20",
-        "imageUrl": "img/bague-elfe.jpg",
+        "imageUrl": "img/bague-elfe.webp",
         "description": "Bague elfe",
         "altTxt": "Bague elfe",
         "quantité": "20"
@@ -12,7 +12,7 @@
         "_id": "2",
         "name": "Bague Templier",
         "price": "20",
-        "imageUrl": "img/bague-templier.jpg",
+        "imageUrl": "img/bague-templier.webp",
         "description": "Bague Templier",
         "altTxt": "Bague Templier",
         "quantité": "20"
@@ -21,7 +21,7 @@
         "_id": "3",
         "name": "boussole",
         "price": "50",
-        "imageUrl": "img/boussole.jpg",
+        "imageUrl": "img/boussole.webp",
         "description": "boussole",
         "altTxt": "boussole",
         "quantité": "20"
@@ -30,7 +30,7 @@
         "_id": "4",
         "name": "Buste d'Odin",
         "price": "50",
-        "imageUrl": "img/buste-odin.jpg",
+        "imageUrl": "img/buste-odin.webp",
         "description": "Buste d'Odin",
         "altTxt": "Buste d'Odin",
         "quantité": "20"
@@ -39,7 +39,7 @@
         "_id": "5",
         "name": "Chandelle",
         "price": "15",
-        "imageUrl": "img/chandelle-grande.jpg",
+        "imageUrl": "img/chandelle-grande.webp",
         "description": "Grande chandelle",
         "altTxt": "Grande chandelle",
         "quantité": "20"
@@ -48,7 +48,7 @@
         "_id": "6",
         "name": "Choppe crâne",
         "price": "35",
-        "imageUrl": "img/choppe-crane.jpg",
+        "imageUrl": "img/choppe-crane.webp",
         "description": "Choppe en forme de crâne",
         "altTxt": "Choppe en forme de crâne",
         "quantité": "20"
@@ -57,7 +57,7 @@
         "_id": "7",
         "name": "Coffret Dragon",
         "price": "30",
-        "imageUrl": "img/coffret-dragon.jpg",
+        "imageUrl": "img/coffret-dragon.webp",
         "description": "Coffret dragon",
         "altTxt": "Coffret dragon",
         "quantité": "20"
@@ -66,7 +66,7 @@
         "_id": "8",
         "name": "Boucles d'Oreilles",
         "price": "20",
-        "imageUrl": "img/dragonflight-earrings.jpg",
+        "imageUrl": "img/dragonflight-earrings.webp",
         "description": "Boucles d'Oreilles",
         "altTxt": "Boucles d'Oreilles",
         "quantité": "20"
@@ -75,7 +75,7 @@
         "_id": "9",
         "name": "Figurine elfe et sa licorne",
         "price": "40",
-        "imageUrl": "img/elfe-licorne.jpeg",
+        "imageUrl": "img/elfe-licorne.webp",
         "description": "Figurine elfe et sa licorne",
         "altTxt": "Figurine elfe et sa licorne",
         "quantité": "20"
@@ -84,7 +84,7 @@
         "_id": "10",
         "name": "Horloge dragon",
         "price": "70",
-        "imageUrl": "img/horloge-dragon.jpg",
+        "imageUrl": "img/horloge-dragon.webp",
         "description": "Horloge dragon",
         "altTxt": "Horloge dragon",
         "quantité": "20"
@@ -93,7 +93,7 @@
         "_id": "11",
         "name": "Coffre à bijoux",
         "price": "30",
-        "imageUrl": "img/oeil-dragon.jpg",
+        "imageUrl": "img/oeil-dragon.webp",
         "description": "Coffre à bijoux",
         "altTxt": "Coffre à bijoux",
         "quantité": "20"
@@ -102,7 +102,7 @@
         "_id": "12",
         "name": "Pendentif dragon",
         "price": "25",
-        "imageUrl": "img/pendentif-dragon.jpg",
+        "imageUrl": "img/pendentif-dragon.webp",
         "description": "Pendentif dragon",
         "altTxt": "Pendentif dragon",
         "quantité": "20"

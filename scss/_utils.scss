@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    width: 700px;
+    width: 44,875rem;
     margin: auto;
     background-color: var(--color2);
 }
@@ -26,10 +26,9 @@
 }
 
 .item img {
-    width: 13.25rem;
-    height: 13.25rem;
+    width: 20.625rem;
+    height: 20.625rem;
     border-radius: 20px;
-    /* background-color: var(--color1); */
 }
 
 .item .name,
@@ -38,10 +37,9 @@
     bottom: 0;
     left: 35%;
     transform: translateX(-50%);
-    // background-color: var(--color1);
     border-radius: 20px;
     height: 5rem;
-    width: 13.25rem;
+    width: 20.625rem;
     margin-bottom: 1.5rem;
     color: white;
 }
