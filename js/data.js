@@ -28,8 +28,13 @@ function loadItems() {
                     addPanier(item);
                 });
 
+                const remaining = document.createElement('div');
+                remaining.classList.add('remaining');
+                remaining.textContent = item.quantité;
+
                 article.appendChild(name);
                 article.appendChild(price);
+                article.appendChild(remaining);
                 article.appendChild(img);
 
                 container.appendChild(article);
@@ -45,7 +50,12 @@ function UpdateTotalCart() {
     let totalGold = 0;
     let totalSilver = 0;
     let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
-
+    //////////////////////////////
+    const coinGold = document.createElement('coinGold');
+    coinGold.classList.add('coin-gold');
+    const coinSilver = document.createElement('coinSilver');
+    coinSilver.classList.add('coin-silver');
+    //////////////////////////////
     for (let item of items) {
         const quantity = parseInt(item.querySelector('.quantity').textContent);
         const gold = parseInt(item.getAttribute('data-gold'));
@@ -64,7 +74,7 @@ function UpdateTotalCart() {
 
     const totalCartElement = document.getElementById('total-cart');
     totalCartElement.textContent = `TOTAL : ${gold} Or et ${silver} Ar`; // Afficher le total en or et argent
-    
+
     // Calcul de la TVA
     const tva = totalAmount * 0.13;
     const totalWithTVA = totalAmount + tva;

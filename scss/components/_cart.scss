@@ -3,7 +3,7 @@
   height: 1024px;
   background-color: var(--color1);
   position: sticky;
-  top: 0.5rem;
+  top: 0;
 }
 .cart-container-box {
   display: flex;
@@ -13,11 +13,12 @@
 }
 .cart-ttl {
   margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: Lancelot;
 }
 .cart-lst {
   list-style: none;
-  // padding: 0;
-  // margin: 0;
+
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -27,10 +28,9 @@
   margin-bottom: 5px;
 }
 .cart-txt {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
-  
 }
 
 .order-btn {
@@ -80,6 +80,7 @@
   margin: 3rem 0 0 6rem;
 }
 .price-container {
+  font-family: Montserrat;
   width: 425px;
   height: 159px;
   background-color: var(--color2);

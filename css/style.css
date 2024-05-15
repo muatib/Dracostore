@@ -17,13 +17,20 @@ a {
   text-decoration: none;
 }
 
-/* lancelot-regular - latin */
+/* lancelot-regular*/
 @font-face {
   font-display: swap;
   font-family: "Lancelot";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
+  src: url("/fonts/Lancelot-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Montserrat-Regular.ttf") format("woff2");
 }
 :root {
   --color1: #fefad4;
@@ -87,7 +94,6 @@ html {
 }
 
 .shop-card {
-  display: grid;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -97,11 +103,10 @@ html {
 }
 
 .price {
-  font-weight: bold;
+  font-family: Montserrat;
 }
 
 .item {
-  text-align: center;
   position: relative;
 }
 
@@ -112,10 +117,11 @@ html {
 }
 
 .item .name,
-.item .price {
+.item .price,
+.item .remaining {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   border-radius: 20px;
   height: 5rem;
@@ -123,10 +129,23 @@ html {
   margin-bottom: 1.5rem;
   color: var(--color6);
   font-size: 1.75rem;
+  font-size: 1rem;
 }
 
 .item .price {
-  bottom: -20px;
+  bottom: -30px;
+}
+
+.item .remaining {
+  bottom: 5px;
+  left: 80%;
+  width: 51px;
+  height: 37px;
+  background-color: #30303C;
+}
+
+.remaining {
+  text-align: center;
 }
 
 .nav-container {
@@ -136,7 +155,7 @@ html {
   align-items: center;
   height: 1024px;
   position: sticky;
-  top: 0.5rem;
+  top: 0;
 }
 
 .nav-logo {
@@ -148,14 +167,8 @@ html {
 .nav-img2,
 .nav-img3 {
   margin-top: 3rem;
-  padding: 1.5rem;
-}
-
-.nav-img1:hover {
-  background-image: url(/img/caissehover.jpg);
-  background-size: cover;
-  transition: 0.5s ease-in-out;
-  z-index: 1000;
+  width: 118px;
+  height: 115px;
 }
 
 .cart-container {
@@ -163,7 +176,7 @@ html {
   height: 1024px;
   background-color: var(--color1);
   position: sticky;
-  top: 0.5rem;
+  top: 0;
 }
 
 .cart-container-box {
@@ -175,6 +188,8 @@ html {
 
 .cart-ttl {
   margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: Lancelot;
 }
 
 .cart-lst {
@@ -189,7 +204,7 @@ html {
 }
 
 .cart-txt {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
@@ -246,6 +261,7 @@ html {
 }
 
 .price-container {
+  font-family: Montserrat;
   width: 425px;
   height: 159px;
   background-color: var(--color2);

@@ -3,15 +3,11 @@ html {
 }
 .shop-container {
   display: grid;
-  grid-template-columns:118px auto 509px;
+  grid-template-columns: 118px auto 509px;
 }
 
 .shop-card {
-  display: grid;
-  // // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // gap: 6rem;
-  // background-color: var(--color2);
-  // margin: 3rem 7rem 7rem 7rem;
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -20,11 +16,13 @@ html {
   margin: 3rem;
 }
 .price {
-  font-weight: bold;
+  // font-weight: bold;
+  font-family: Montserrat;
+  // font-size: 0.5rem;
 }
 
 .item {
-  text-align: center;
+  // text-align: center;
   position: relative;
 }
 
@@ -34,12 +32,12 @@ html {
   border-radius: 20px;
 }
 
-
 .item .name,
-.item .price {
+.item .price,
+.item .remaining {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   border-radius: 20px;
   height: 5rem;
@@ -47,7 +45,21 @@ html {
   margin-bottom: 1.5rem;
   color: var(--color6);
   font-size: 1.75rem;
+  font-size: 1rem;
+ 
 }
+
 .item .price {
-  bottom: -20px;
+  bottom: -30px;
+}
+
+.item .remaining {
+  bottom: 5px;
+  left: 80%;
+  width: 51px;
+  height: 37px;
+  background-color: #30303C;
+}
+.remaining{
+  text-align: center;
 }
