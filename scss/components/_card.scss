@@ -36,7 +36,8 @@ html {
 
 
 .item .name,
-.item .price {
+.item .price,
+.item .remaining {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -50,4 +51,12 @@ html {
 }
 .item .price {
   bottom: -20px;
+}
+
+.item .remaining {
+  bottom: -20px;
+  left: 80%;
+  width: 51px;
+  height: 37px;
+  background-color: #30303C;
 }
