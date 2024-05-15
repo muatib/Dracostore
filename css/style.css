@@ -153,6 +153,16 @@ html {
   align-items: center;
 }
 
+.remiseCoin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remiseCoin-img {
+  margin: 0 20px;
+}
+
 .nav-container {
   background-color: var(--color1);
   display: flex;

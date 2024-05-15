@@ -19,19 +19,14 @@ function loadItems() {
                 const coinMoney = document.getElementById('coinTemplate');
                 const productMoney = document.importNode(coinMoney.content, true);
 
-
                 productMoney.querySelector('.js-coin-gold').textContent = item.gold;
                 productMoney.querySelector('.js-coin-gold-img').src = 'img/or.png';
-
-
                 productMoney.querySelector('.js-coin-silver').textContent = item.silver;
                 productMoney.querySelector('.js-coin-silver-img').src = 'img/silver.png';
 
                 const price = document.createElement('div');
                 price.classList.add('price');
-                // price.textContent = item.gold + " Or et " + item.silver + " Ar";
                 price.append(productMoney);
-
 
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
@@ -158,7 +153,7 @@ function addPanier(article) {
 }
 
 // Dicrease quantity in panier
-function decrease(listItem, price) {
+function decrease(listItem) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity > 1) { // Not quantity negative
@@ -168,7 +163,7 @@ function decrease(listItem, price) {
 }
 
 // Add quantity in panier
-function increaseQuantity(listItem, availableQuantity, price) {
+function increaseQuantity(listItem, availableQuantity) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity < availableQuantity) {

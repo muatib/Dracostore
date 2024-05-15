@@ -67,8 +67,19 @@ html {
 .remaining{
   text-align: center;
 }
+
+//NOUVEAU
 .shop-card__coin{
   display: flex;
   justify-content: left;
   align-items: center;
 }
+.remiseCoin{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remiseCoin-img{
+  margin: 0 20px;
+}
+//NOUVEAU
