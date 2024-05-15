@@ -16,9 +16,23 @@ function loadItems() {
                 name.classList.add('name');
                 name.textContent = item.name;
 
+                const coinMoney = document.getElementById('coinTemplate');
+                const productMoney = document.importNode(coinMoney.content, true);
+
+                
+                productMoney.querySelector('.js-coin-gold').textContent = item.gold;
+                productMoney.querySelector('.js-coin-gold-img').src = 'img/or.png';
+
+
+                productMoney.querySelector('.js-coin-silver').textContent = item.silver;
+                productMoney.querySelector('.js-coin-silver-img').src = 'img/silver.png';
+
                 const price = document.createElement('div');
                 price.classList.add('price');
-                price.textContent = item.gold + " Or et " + item.silver + " Ar";
+                // price.textContent = item.gold + " Or et " + item.silver + " Ar";
+                price.append(productMoney);
+
+
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.altTxt;
@@ -35,6 +49,7 @@ function loadItems() {
                 article.appendChild(price);
                 article.appendChild(remaining);
                 article.appendChild(img);
+                article.appendChild(productMoney);
 
                 container.appendChild(article);
             });
@@ -50,10 +65,10 @@ function UpdateTotalCart() {
     let totalSilver = 0;
     let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
     //////////////////////////////
-    const coinGold = document.createElement('coinGold');
-    coinGold.classList.add('coin-gold');
-    const coinSilver = document.createElement('coinSilver');
-    coinSilver.classList.add('coin-silver');
+    // const coinGold = document.createElement('coinGold');
+    // coinGold.classList.add('coin-gold');
+    // const coinSilver = document.createElement('coinSilver');
+    // coinSilver.classList.add('coin-silver');
     //////////////////////////////
     for (let item of items) {
         const quantity = parseInt(item.querySelector('.quantity').textContent);

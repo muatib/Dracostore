@@ -28,23 +28,23 @@
       </nav>
 
       <div class="shop-card" id="item-container">
-      <!-- LIst of items -->
-      </div>
-      <!-- <template class="shop-card" id="item-container">
-        <div class="item">
-          <div class="name">Item name</div>
-          <div class="price">Item price</div>
-        </div>
-      </template> -->
+        <!-- LIst of items -->
 
+        <template id="coinTemplate">
+          <li class="shop-card__coin">
+            <p class="js-coin-gold coin-space-gold">0</p>
+            <img class="js-coin-gold-img coin-space-gold-img" src="" alt="image de piece d'or">
+            <p class="js-coin-silver coin-space-silver">0</p>
+            <img class="js-coin-silver-img coin-space-silver-img" src="" alt="image de piece d'argent">
+          </li>
+        </template>
+      </div>
       <div class="cart-container" id="cart">
         <h1>Informations clients</h1>
         <div class="order">
           <button class="order-btn">nouveau</button>
           <input class="order-txt" type="text" placeholder="N° de commande">
         </div>
-
-
         <select class="customer" name="customer" id="customer-select">
           <option value="">Nom client</option>
           <option value="jack Sparrow">jack sparrow</option>

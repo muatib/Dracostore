@@ -105,7 +105,7 @@ html {
   position: relative;
 }
 
-.item img {
+.item > img {
   width: 350px;
   height: 350px;
   border-radius: 20px;
@@ -136,6 +136,12 @@ html {
   width: 51px;
   height: 37px;
   background-color: #30303C;
+}
+
+.shop-card__coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-container {
