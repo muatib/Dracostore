@@ -19,7 +19,7 @@ function loadItems() {
                 const coinMoney = document.getElementById('coinTemplate');
                 const productMoney = document.importNode(coinMoney.content, true);
 
-                
+
                 productMoney.querySelector('.js-coin-gold').textContent = item.gold;
                 productMoney.querySelector('.js-coin-gold-img').src = 'img/or.png';
 
@@ -57,6 +57,7 @@ function loadItems() {
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
 }
 
+
 // Update total cart
 function UpdateTotalCart() {
     const cartList = document.getElementById('cart-list');
@@ -64,12 +65,6 @@ function UpdateTotalCart() {
     let totalGold = 0;
     let totalSilver = 0;
     let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
-    //////////////////////////////
-    // const coinGold = document.createElement('coinGold');
-    // coinGold.classList.add('coin-gold');
-    // const coinSilver = document.createElement('coinSilver');
-    // coinSilver.classList.add('coin-silver');
-    //////////////////////////////
     for (let item of items) {
         const quantity = parseInt(item.querySelector('.quantity').textContent);
         const gold = parseInt(item.getAttribute('data-gold'));
