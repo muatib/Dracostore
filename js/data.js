@@ -17,9 +17,18 @@ function loadItems() {
                 name.classList.add('name');
                 name.textContent = item.name;
 
+                const coinMoney = document.getElementById('coinTemplate');
+                const productMoney = document.importNode(coinMoney.content, true);
+
+                productMoney.querySelector('.js-coin-gold').textContent = item.gold;
+                productMoney.querySelector('.js-coin-gold-img').src = 'img/or.png';
+                productMoney.querySelector('.js-coin-silver').textContent = item.silver;
+                productMoney.querySelector('.js-coin-silver-img').src = 'img/silver.png';
+
                 const price = document.createElement('div');
                 price.classList.add('price');
-                price.textContent = item.gold + " Or et " + item.silver + " Ar";
+                price.append(productMoney);
+
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.altTxt;
@@ -36,12 +45,14 @@ function loadItems() {
                 article.appendChild(price);
                 article.appendChild(remaining);
                 article.appendChild(img);
+                article.appendChild(productMoney);
 
                 container.appendChild(article);
             });
         })
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
 }
+
 
 // Update total cart
 function UpdateTotalCart() {
@@ -50,12 +61,6 @@ function UpdateTotalCart() {
     let totalGold = 0;
     let totalSilver = 0;
     let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
-    //////////////////////////////
-    const coinGold = document.createElement('coinGold');
-    coinGold.classList.add('coin-gold');
-    const coinSilver = document.createElement('coinSilver');
-    coinSilver.classList.add('coin-silver');
-    //////////////////////////////
     for (let item of items) {
         const quantity = parseInt(item.querySelector('.quantity').textContent);
         const gold = parseInt(item.getAttribute('data-gold'));
@@ -149,7 +154,7 @@ function addPanier(article) {
 }
 
 // Dicrease quantity in panier
-function decrease(listItem, price) {
+function decrease(listItem) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity > 1) { // Not quantity negative
@@ -159,7 +164,7 @@ function decrease(listItem, price) {
 }
 
 // Add quantity in panier
-function increaseQuantity(listItem, availableQuantity, price) {
+function increaseQuantity(listItem, availableQuantity) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
     if (quantity < availableQuantity) {

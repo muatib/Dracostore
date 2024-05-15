@@ -22,7 +22,7 @@ html {
   position: relative;
 }
 
-.item img {
+.item > img {
   width: 330px;
   height: 331px;
   border-radius: 20px;
@@ -44,6 +44,7 @@ html {
 }
 .price {
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .item .price {
@@ -73,4 +74,24 @@ html {
   align-items: center;
   justify-content: center;
 
+}
+.shop-card__coin{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.remiseCoin{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remiseCoin-img{
+  margin: 0 20px;
+}
+.js-coin-gold-img{
+  margin: 0 0.5rem 0 0.5rem;
+  
+}
+.js-coin-silver-img{
+  margin: 0 0.5rem 0 0.5rem;
 }
