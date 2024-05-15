@@ -1,0 +1,324 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* lancelot-regular*/
+@font-face {
+  font-display: swap;
+  font-family: "Lancelot";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Lancelot-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Montserrat-Regular.ttf") format("woff2");
+}
+:root {
+  --color1: #fefad4;
+  --color2: #30303c;
+  --color3: #f69a60;
+  --color4: #403686;
+  --color5: #6F3713;
+  --color6: #000000;
+  font-family: "Lancelot";
+  font-size: 16px;
+}
+
+.coin-gold {
+  background-image: url("/img/or.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.coin-silver {
+  background-image: url("/img/silver.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.ico-moins {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  border-color: #000000;
+  height: 20px;
+  width: 20px;
+}
+
+.ico-plus {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  border-color: #000000;
+  height: 20px;
+  width: 20px;
+}
+
+.article-li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-name {
+  margin-right: auto;
+}
+
+.quantity {
+  margin: 0 1rem;
+}
+
+html {
+  background-color: var(--color2);
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: 118px auto 509px;
+}
+
+.shop-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--color2);
+  margin: 3rem;
+}
+
+.price {
+  font-family: Montserrat;
+}
+
+.item {
+  position: relative;
+}
+
+.item > img {
+  width: 330px;
+  height: 331px;
+  border-radius: 20px;
+}
+
+.item .name,
+.item .price {
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  color: var(--color6);
+}
+
+.name {
+  font-size: 1.75rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.item .price {
+  bottom: -30px;
+}
+
+.item .remaining {
+  bottom: 5px;
+  left: 80%;
+  width: 51px;
+  height: 37px;
+}
+
+.remaining {
+  font-family: Montserrat;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(48, 48, 60, 0.3843137255);
+  color: var(--color1);
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-card__coin {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.remiseCoin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remiseCoin-img {
+  margin: 0 20px;
+}
+
+.js-coin-gold-img {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.js-coin-silver-img {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.format-btn {
+  width: 10px;
+}
+
+.nav-container {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+  position: sticky;
+  top: 0;
+}
+
+.nav-logo {
+  width: 60px;
+  margin: 3rem 0 0 1.5rem;
+}
+
+.nav-img1,
+.nav-img2,
+.nav-img3 {
+  margin-top: 3rem;
+  width: 118px;
+  height: 115px;
+}
+
+.cart-container {
+  padding: 42px;
+  height: 1024px;
+  background-color: var(--color1);
+  position: sticky;
+  top: 0;
+}
+
+.cart-container-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.cart-ttl {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: Lancelot;
+}
+
+.cart-lst {
+  list-style: none;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-lst li {
+  margin-bottom: 5px;
+}
+
+.cart-txt {
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.order-btn {
+  width: 115px;
+  height: 59px;
+  text-transform: uppercase;
+  background-color: var(--color5);
+  color: white;
+}
+
+.order-txt {
+  width: 290px;
+  height: 59px;
+  background-color: var(--color1);
+  text-align: center;
+  margin-right: 2px;
+  border: black 3px solid;
+}
+
+.customer {
+  width: 423px;
+  height: 59px;
+  background-color: var(--color1);
+  margin-top: 1rem;
+  border: black 3px solid;
+}
+
+.valid-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.valid-btn {
+  height: 80px;
+  width: 308px;
+  background-color: var(--color5);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.valid-img {
+  width: 96px;
+  height: 80px;
+}
+
+.valid-logo {
+  width: 265px;
+  height: 80px;
+  margin: 3rem 0 0 6rem;
+}
+
+.price-container {
+  font-family: Montserrat;
+  width: 425px;
+  height: 159px;
+  background-color: var(--color2);
+  color: white;
+  line-height: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-name {
+  font-family: Montserrat;
+}/*# sourceMappingURL=style.css.map */
