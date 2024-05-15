@@ -43,13 +43,14 @@
         </div>
         
         <div class="cart-container" id="cart">
-            <h1>Informations clients</h1>
-            <div class="order">
+
+            <h1 class="cart-ttl">Informations clients</h1>
+            <div class="order cart-container-box">
             <button class="order-btn">nouveau</button>
             <input class="order-txt" type="text" placeholder="N° de commande">
         </div>
         
-
+<div class="cart-containner-box">
 <select class="customer" name="customer" id="customer-select">
   <option value="">Nom client</option>
   <option value="jack Sparrow">jack sparrow</option>
@@ -59,6 +60,7 @@
   <option value="Alberto de la Rosa">Alberto de la Rosa</option>
   <option value="Sponger Bob">Sponger Bob</option>
 </select>
+</div>
           <h2 class="cart-txt">Articles</h2>
           <ul class="cart-lst" id="cart-list">
             <!-- list buy -->
@@ -78,7 +80,7 @@
             </li>
           </ul>
           <!-- <p id="total">Total : <span>0</span>po</p> -->
-          <div class="valid-container">
+          <div class="valid-container cart-container-box">
             <button class="valid-btn">valider le panier</button>
             <img class="valid-img" src="/img/supprimer.png" alt="supprimer">
           </div>

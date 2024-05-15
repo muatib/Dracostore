@@ -83,7 +83,7 @@ html {
 
 .shop-container {
   display: grid;
-  grid-template-columns: 105px auto 500px;
+  grid-template-columns: 118px auto 509px;
 }
 
 .shop-card {
@@ -106,8 +106,8 @@ html {
 }
 
 .item img {
-  width: 350px;
-  height: 350px;
+  width: 330px;
+  height: 331px;
   border-radius: 20px;
 }
 
@@ -137,7 +137,6 @@ html {
   height: 1024px;
   position: sticky;
   top: 0.5rem;
-  margin: 0.5rem 0 0 0.5rem;
 }
 
 .nav-logo {
@@ -160,20 +159,29 @@ html {
 }
 
 .cart-container {
-  padding: 20px;
-  border-radius: 5px;
+  padding: 42px;
   height: 1024px;
   background-color: var(--color1);
   position: sticky;
   top: 0.5rem;
-  margin: 0.5rem 0.5rem 0 0;
+}
+
+.cart-container-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.cart-ttl {
+  margin-bottom: 1rem;
 }
 
 .cart-lst {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 380px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-lst li {
@@ -183,38 +191,31 @@ html {
 .cart-txt {
   font-size: 2rem;
   margin-top: 3rem;
-  margin-left: 0.5rem;
-}
-
-.order {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .order-btn {
-  width: 6rem;
-  height: 3rem;
+  width: 115px;
+  height: 59px;
   text-transform: uppercase;
   background-color: var(--color5);
   color: white;
-  margin: 1rem 0 0.9rem 0.5rem;
 }
 
 .order-txt {
-  width: 16rem;
-  height: 3rem;
+  width: 290px;
+  height: 59px;
   background-color: var(--color1);
   text-align: center;
-  margin-right: 5rem;
+  margin-right: 2px;
   border: black 3px solid;
 }
 
 .customer {
-  width: 24rem;
-  height: 3rem;
+  width: 423px;
+  height: 59px;
   background-color: var(--color1);
-  margin-left: 0.5rem;
+  margin-top: 1rem;
   border: black 3px solid;
 }
 
@@ -222,12 +223,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1.5rem;
 }
 
 .valid-btn {
-  height: 4rem;
-  width: 17rem;
+  height: 80px;
+  width: 308px;
   background-color: var(--color5);
   color: white;
   text-transform: uppercase;
@@ -235,18 +235,22 @@ html {
 }
 
 .valid-img {
-  height: 4rem;
+  width: 96px;
+  height: 80px;
 }
 
 .valid-logo {
   width: 265px;
   height: 80px;
-  margin: 2.5rem 0 0 7rem;
+  margin: 3rem 0 0 6rem;
 }
 
 .price-container {
+  width: 425px;
+  height: 159px;
   background-color: var(--color2);
   color: white;
   line-height: 2rem;
   padding: 0.5rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */
