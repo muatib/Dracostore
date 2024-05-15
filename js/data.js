@@ -19,8 +19,7 @@ function loadItems() {
 
                 const price = document.createElement('div');
                 price.classList.add('price');
-                price.textContent = item.gold + " Or " + item.silver + " Ar";
-
+                price.textContent = item.gold + " Or et " + item.silver + " Ar";
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.altTxt;
@@ -37,6 +36,49 @@ function loadItems() {
             });
         })
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
+}
+
+// Update total cart
+function UpdateTotalCart() {
+    const cartList = document.getElementById('cart-list');
+    const items = cartList.getElementsByClassName('article-li');
+    let totalGold = 0;
+    let totalSilver = 0;
+    let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
+
+    for (let item of items) {
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const gold = parseInt(item.getAttribute('data-gold'));
+        const silver = parseInt(item.getAttribute('data-silver'));
+        totalGold += gold * quantity;
+        totalSilver += silver * quantity;
+        totalQuantity += quantity; // Ajouter la quantité de chaque article au total
+    }
+
+    // Convertir la valeur d'argent en valeur d'or (1 or = 100 argent)
+    const totalSilverToGold = totalSilver / 100;
+    const totalAmount = totalGold + totalSilverToGold;
+
+    const gold = Math.floor(totalAmount);
+    const silver = Math.round((totalAmount - gold) * 100);
+
+    const totalCartElement = document.getElementById('total-cart');
+    totalCartElement.textContent = `TOTAL : ${gold} Or et ${silver} Ar`; // Afficher le total en or et argent
+    
+    // Calcul de la TVA
+    const tva = totalAmount * 0.13;
+    const totalWithTVA = totalAmount + tva;
+
+    // Création de la div pour afficher la TVA
+    const tvaElement = document.getElementById('total-taxe');
+    tvaElement.textContent = `TVA (13%) : ${tva.toFixed(2)} po`; // Affichage de la TVA avec 2 décimales
+
+    // Insertion de la div après le total
+    totalCartElement.insertAdjacentElement('afterend', tvaElement);
+
+    // Afficher le nombre total d'articles
+    const totalArticleElement = document.getElementById('total-article');
+    totalArticleElement.textContent = `Nombre total d'articles : ${totalQuantity}`;
 }
 
 // Add quantity to cart
@@ -62,7 +104,11 @@ function addPanier(article) {
 
         const itemName = document.createElement('span');
         itemName.classList.add('article-name');
-        itemName.textContent = article.name + " - " + article.gold + " Or " + " et " +  article.silver + " Ar ";
+        itemName.textContent = article.name + " - " + article.gold + " Or et " + article.silver + " Ar";
+
+        // Adding data-gold and data-silver attributes to the list item
+        listItem.setAttribute('data-gold', article.gold);
+        listItem.setAttribute('data-silver', article.silver);
 
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
@@ -79,7 +125,7 @@ function addPanier(article) {
         increaseButton.textContent = "+";
         increaseButton.classList.add('ico-plus');
         increaseButton.addEventListener('click', function () {
-            increaseQuantity(listItem, article.quantité, article.gold, article.sivler);
+            increaseQuantity(listItem, article.quantité, article.gold, article.silver);
         });
 
         listItem.appendChild(itemName);
