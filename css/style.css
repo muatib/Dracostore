@@ -6,15 +6,9 @@
   margin: 0;
 }
 
-:root {
-  --color1: #fefad4;
-  --color2: #30303c;
-  --color3: #f69a60;
-  --color4: #403686;
-  --color5: #6F3713;
-  --color6: #000000;
-  font-family: "Lancelot";
-  font-size: 16px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -31,164 +25,15 @@ a {
   font-weight: 400;
   src: url("../fonts/lancelot-v26-latin-regular.woff2") format("woff2");
 }
-body {
-  margin: auto;
-}
-
-html {
-  background-color: var(--color2);
-}
-
-.buy-container {
-  display: grid;
-  grid-template-columns: 8% 62% 30%;
-}
-
-.nav-container {
-  background-color: var(--color1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 1024px;
-}
-
-.nav-img {
-  margin-top: 3rem;
-}
-
-.price {
-  font-weight: bold;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  background-color: var(--color2);
-  margin: 3rem;
-}
-
-.item {
-  text-align: center;
-  position: relative;
-}
-
-.item img {
-  width: 330px;
-  height: 20.625rem;
-  border-radius: 20px;
-}
-
-.item .name,
-.item .price {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
-  height: 5rem;
-  width: 20.625rem;
-  margin-bottom: 1.5rem;
-  color: var(--color6);
-  font-size: 1.75rem;
-}
-
-.item .price::after {
-  background-image: url("img/or.png");
-}
-
-.item .price {
-  bottom: -20px;
-}
-
-.cart {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  height: 1024px;
-  background-color: var(--color1);
-}
-
-.cart-lst {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 400px;
-}
-
-.cart-lst li {
-  margin-bottom: 5px;
-}
-
-.order {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.order-btn {
-  width: 6rem;
-  height: 3rem;
-  text-transform: uppercase;
-  background-color: var(--color5);
-  color: white;
-  margin: 1rem 0 0.9rem 0.5rem;
-}
-
-.order-txt {
-  width: 16rem;
-  height: 3rem;
-  background-color: var(--color1);
-  text-align: center;
-  border: black 3px solid;
-}
-
-.customer {
-  width: 24rem;
-  height: 3rem;
-  background-color: var(--color1);
-  margin-left: 0.5rem;
-  border: black 3px solid;
-}
-
-.cart-txt {
-  font-size: 2rem;
-  margin-top: 3rem;
-  margin-left: 0.5rem;
-}
-
-.price-container {
-  background-color: var(--color2);
-  color: white;
-  line-height: 2rem;
-  padding: 0.5rem;
-}
-
-.cart-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-}
-
-.cart-btn {
-  height: 4rem;
-  width: 17rem;
-  background-color: var(--color5);
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
-.cart-img {
-  height: 4rem;
-}
-
-.cart-logo {
-  width: 265px;
-  height: 80px;
-  margin: 2.5rem 0 0 4rem;
+:root {
+  --color1: #fefad4;
+  --color2: #30303c;
+  --color3: #f69a60;
+  --color4: #403686;
+  --color5: #6F3713;
+  --color6: #000000;
+  font-family: "Lancelot";
+  font-size: 16px;
 }
 
 .coin-gold {
@@ -232,7 +77,176 @@ html {
   margin: 0 1rem;
 }
 
-.logo {
-  width: 50px;
+html {
+  background-color: var(--color2);
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: 105px auto 500px;
+}
+
+.shop-card {
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--color2);
+  margin: 3rem;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.item {
+  text-align: center;
+  position: relative;
+}
+
+.item img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.item .name,
+.item .price {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  color: var(--color6);
+  font-size: 1.75rem;
+}
+
+.item .price {
+  bottom: -20px;
+}
+
+.nav-container {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1024px;
+  position: sticky;
+  top: 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.nav-logo {
+  width: 60px;
+  margin: 3rem 0 0 1.5rem;
+}
+
+.nav-img1,
+.nav-img2,
+.nav-img3 {
+  margin-top: 3rem;
+  padding: 1.5rem;
+}
+
+.nav-img1:hover {
+  background-image: url(/img/caissehover.jpg);
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.cart-container {
+  padding: 20px;
+  border-radius: 5px;
+  height: 1024px;
+  background-color: var(--color1);
+  position: sticky;
+  top: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+.cart-lst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 380px;
+}
+
+.cart-lst li {
+  margin-bottom: 5px;
+}
+
+.cart-txt {
+  font-size: 2rem;
+  margin-top: 3rem;
   margin-left: 0.5rem;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-btn {
+  width: 6rem;
+  height: 3rem;
+  text-transform: uppercase;
+  background-color: var(--color5);
+  color: white;
+  margin: 1rem 0 0.9rem 0.5rem;
+}
+
+.order-txt {
+  width: 16rem;
+  height: 3rem;
+  background-color: var(--color1);
+  text-align: center;
+  margin-right: 5rem;
+  border: black 3px solid;
+}
+
+.customer {
+  width: 24rem;
+  height: 3rem;
+  background-color: var(--color1);
+  margin-left: 0.5rem;
+  border: black 3px solid;
+}
+
+.valid-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.valid-btn {
+  height: 4rem;
+  width: 17rem;
+  background-color: var(--color5);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.valid-img {
+  height: 4rem;
+}
+
+.valid-logo {
+  width: 265px;
+  height: 80px;
+  margin: 2.5rem 0 0 7rem;
+}
+
+.price-container {
+  background-color: var(--color2);
+  color: white;
+  line-height: 2rem;
+  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
