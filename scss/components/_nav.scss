@@ -6,12 +6,14 @@
   height: 1024px;
   position: sticky;
   top: 0;
-  
+
 }
+
 .nav-logo {
   width: 60px;
   margin: 3rem 0 0 1.5rem;
 }
+
 .nav-img1,
 .nav-img2,
 .nav-img3 {
@@ -22,3 +24,81 @@
 
 }
 
+// //nouveau
+.dragon-up {
+  width: 33.19rem;
+  height: 27.63rem;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+}
+
+.dragon-bottom {
+  width: 36.88rem;
+  height: 31.06rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+}
+
+.logo-home {
+  width: 17.19rem;
+  height: 5.23rem;
+  position: absolute;
+  bottom: 1.41rem;
+  right: 4.13rem;
+  background-repeat: no-repeat;
+}
+
+.montant-caisse {
+  font-family: "Montserrat";
+  color: #fefad4;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: #fefad4;
+  text-align: center;
+  align-content: center;
+  height: 5rem;
+  width: 26.63rem;
+  padding: 0.31rem;
+  position: absolute;
+  left: 13.19rem;
+  top: 3.69rem;
+}
+.blocs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+.systeme-caisse,
+.gestion-stock, 
+.historique-commande
+ {
+  background-color: #fefad4;
+  border-radius: 20px;
+  position: relative;
+  width: 20.69rem;
+  height: 20.69rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2.63rem;
+  text-align: center;
+}
+.icone-caisse,
+.icone-historique,
+.icone-gestion {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 2.94rem;
+  left: 5.63rem;
+}
