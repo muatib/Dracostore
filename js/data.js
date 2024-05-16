@@ -65,13 +65,11 @@ function UpdateTotalCart() {
         totalQuantity += quantity;
     }
 
-    // Convertir la valeur d'argent en valeur d'or (1 or = 100 argent)
     const totalSilverToGold = totalSilver / 100;
     const totalAmount = totalGold + totalSilverToGold;
 
-    // Mettre à jour l'affichage du total
     const totalCartElement = document.getElementById('total-cart');
-    totalCartElement.innerHTML = ''; // Vider l'élément
+    totalCartElement.innerHTML = '';
 
     const totalCartText = document.createElement("span");
     totalCartText.textContent = `TOTAL : ${totalAmount.toFixed(2)} `;
@@ -80,7 +78,7 @@ function UpdateTotalCart() {
     const goldImg = document.createElement("img");
     goldImg.src = "img/or.png";
     goldImg.alt = "Or";
-    goldImg.classList.add('total-gold-img'); // Ajouter une classe CSS pour positionner l'image
+    goldImg.classList.add('total-gold-img');
     totalCartElement.appendChild(goldImg);
 
     const silverImg = document.createElement("img");
@@ -88,13 +86,11 @@ function UpdateTotalCart() {
     silverImg.alt = "Ar";
     totalCartElement.appendChild(silverImg);
 
-    // Calcul de la TVA
     const tva = totalAmount * 0.13;
     const totalWithTVA = totalAmount + tva;
 
-    // Création de la div pour afficher la TVA
     const tvaElement = document.getElementById('total-taxe');
-    tvaElement.innerHTML = ''; // Vider l'élément
+    tvaElement.innerHTML = '';
 
     const tvaText = document.createElement("span");
     tvaText.textContent = `TVA (13%) : ${tva.toFixed(2)} `;
@@ -103,13 +99,11 @@ function UpdateTotalCart() {
     const goldImgTva = document.createElement("img");
     goldImgTva.src = "img/or.png";
     goldImgTva.alt = "Or";
-    goldImgTva.classList.add('total-gold-img'); // Ajouter une classe CSS pour positionner l'image
+    goldImgTva.classList.add('total-gold-img');
     tvaElement.appendChild(goldImgTva);
 
-    // Insertion de la div après le total
     totalCartElement.insertAdjacentElement('afterend', tvaElement);
 
-    // Mettre à jour l'affichage du nombre total d'articles
     const totalArticleElement = document.getElementById('total-article');
     if (totalArticleElement) {
         totalArticleElement.textContent = `${totalQuantity} Article(s)`;
@@ -120,10 +114,8 @@ function UpdateTotalCart() {
 function addPanier(article) {
     const cartList = document.getElementById('cart-list');
 
-    // Vérifier si l'article est déjà dans le panier
     const existingItem = cartList.querySelector(`[data-id="${article._id}"]`);
     if (existingItem) {
-        // Mettre à jour la quantité de l'article existant
         const quantityDisplay = existingItem.querySelector('.quantity');
         const quantity = parseInt(quantityDisplay.textContent);
         const availableQuantity = parseInt(article.quantité);
@@ -134,7 +126,6 @@ function addPanier(article) {
             alert("La quantité disponible pour cet article est épuisée.");
         }
     } else {
-        // Créer un nouvel élément de liste pour l'article
         const listItem = document.createElement('li');
         listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
@@ -146,12 +137,10 @@ function addPanier(article) {
         const productArticle = document.importNode(ArticleMoney.content, true);
         /////////////////////////
 
-        // Créer un élément pour le nom de l'article
         const itemName = document.createElement('span');
         itemName.classList.add('article-name');
         itemName.textContent = article.name;
 
-        // Créer un élément pour le prix de l'article
         const coinMoney = document.getElementById('coinTemplate');
         const itemPrice = document.importNode(coinMoney.content, true);
 
@@ -160,7 +149,6 @@ function addPanier(article) {
         itemPrice.querySelector('.js-coin-silver').textContent = article.silver;
         itemPrice.querySelector('.js-coin-silver-img').src = 'img/silver.png';
 
-        // Ajouter les attributs data-gold et data-silver à l'élément de liste
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
 
@@ -172,8 +160,13 @@ function addPanier(article) {
             removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
         });
         /////////////////////////
-
-        // Créer des éléments pour les boutons de quantité
+        /////////////////////////
+        ////Clear articles list////
+        /////////////////////////
+        document.getElementById('clear-cart-button').addEventListener('click', function () {
+            clearCart();
+        });
+        /////////////////////////
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
         decreaseButton.classList.add('ico-moins');
@@ -192,7 +185,6 @@ function addPanier(article) {
             increaseQuantity(listItem, article.quantité);
         });
 
-        // Ajouter les éléments créés à l'élément de liste
         listItem.appendChild(itemName);
         listItem.appendChild(itemPrice);
         listItem.appendChild(decreaseButton);
@@ -204,12 +196,20 @@ function addPanier(article) {
         listItem.appendChild(recycleButton);
         /////////////////////////
 
-        // Ajouter l'élément de liste à la liste du panier
         cartList.appendChild(listItem);
 
-        // Mettre à jour le total du panier
         UpdateTotalCart();
     }
+}
+/////////////////////////
+////Clear Cart////
+/////////////////////////
+function clearCart() {
+    const cartList = document.getElementById('cart-list');
+    while (cartList.firstChild) {
+        cartList.removeChild(cartList.firstChild);
+    }
+    UpdateTotalCart();
 }
 
 function decrease(listItem) {
@@ -219,7 +219,6 @@ function decrease(listItem) {
         quantityDisplay.textContent = quantity - 1;
         UpdateTotalCart();
     } else {
-        // Supprimer la ligne d'article lorsque la quantité atteint zéro
         listItem.parentNode.removeChild(listItem);
         UpdateTotalCart();
     }
@@ -236,7 +235,6 @@ function increaseQuantity(listItem, availableQuantity) {
     }
 }
 
-// Fonction pour supprimer un article du panier
 function removeItemFromCart(itemToRemove) {
     itemToRemove.remove();
     UpdateTotalCart();
