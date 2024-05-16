@@ -28,7 +28,8 @@
 
 .article-li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  
 }
 
 .article-name {
@@ -36,4 +37,5 @@
 }
 .quantity {
   margin: 0 1rem;
+  font-family: Montserrat;
 }

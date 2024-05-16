@@ -56,6 +56,7 @@
   margin-top: 1rem;
   border: black 3px solid;
 }
+
 .valid-container {
   display: flex;
   align-items: center;
@@ -86,9 +87,21 @@
   background-color: var(--color2);
   color: white;
   line-height: 2rem;
-  padding: 0.5rem;
+  padding: 1.5rem;
   margin-bottom: 2rem;
 }
-.article-name{
+.article-name {
   font-family: Montserrat;
 }
+.js-recyble-button{
+margin-left: 1.5rem;
+}
+.article-remise {
+  display: flex;
+  justify-content: space-between;
+}
+.total-flex{
+  display: flex;
+}
+
+

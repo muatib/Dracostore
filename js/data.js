@@ -1,13 +1,12 @@
-
-// Array Data JSON
 const itemsData = [];
-
-// Get items in JSON
+/**
+ * 
+ */
 function loadItems() {
     fetch('json/product.json')
         .then(response => response.json())
         .then(data => {
-            itemsData.push(...data); // Add data to itemsData
+            itemsData.push(...data);
             const container = document.getElementById('item-container');
             itemsData.forEach(item => {
                 const article = document.createElement('div');
@@ -41,6 +40,12 @@ function loadItems() {
                 remaining.classList.add('remaining');
                 remaining.textContent = item.quantité;
 
+                remaining.setAttribute('data-id', item._id);
+
+                if (item.quantité <= 5) {
+                    remaining.classList.add('low-stock');
+                }
+
                 article.appendChild(name);
                 article.appendChild(price);
                 article.appendChild(remaining);
@@ -53,61 +58,96 @@ function loadItems() {
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
 }
 
-
-// Update total cart
 function UpdateTotalCart() {
     const cartList = document.getElementById('cart-list');
     const items = cartList.getElementsByClassName('article-li');
     let totalGold = 0;
     let totalSilver = 0;
-    let totalQuantity = 0; // Variable pour stocker le nombre total d'articles
+    let totalQuantity = 0;
     for (let item of items) {
         const quantity = parseInt(item.querySelector('.quantity').textContent);
         const gold = parseInt(item.getAttribute('data-gold'));
         const silver = parseInt(item.getAttribute('data-silver'));
         totalGold += gold * quantity;
         totalSilver += silver * quantity;
-        totalQuantity += quantity; // Ajouter la quantité de chaque article au total
+        totalQuantity += quantity;
     }
 
-    // Convertir la valeur d'argent en valeur d'or (1 or = 100 argent)
-    const totalSilverToGold = totalSilver / 100;
-    const totalAmount = totalGold + totalSilverToGold;
-
-    const gold = Math.floor(totalAmount);
-    const silver = Math.round((totalAmount - gold) * 100);
+    const silverToGoldRate = 100;
+    const totalSilverToGold = totalSilver / silverToGoldRate;
+    const totalInGoldAndSilver = totalGold + totalSilverToGold;
 
     const totalCartElement = document.getElementById('total-cart');
-    totalCartElement.textContent = `TOTAL : ${gold} Or et ${silver} Ar`; // Afficher le total en or et argent
+    totalCartElement.innerHTML = '';
 
-    // Calcul de la TVA
-    const tva = totalAmount * 0.13;
-    const totalWithTVA = totalAmount + tva;
+    const tvaRate = 0.13;
+    const tva = totalInGoldAndSilver * tvaRate;
+    const tvaSilverRest = totalSilver * tvaRate;
+    const totalSilverWithTva = totalSilver * tvaRate;
+    const totalWithTVA = totalInGoldAndSilver + tva;
 
-    // Création de la div pour afficher la TVA
+    const goldImg = document.createElement("img");
+    goldImg.src = "img/or.png";
+    goldImg.alt = "Pièce d'Or, donnez-moi des tunes !!!";
+    goldImg.classList.add('total-gold-img');
+
+    const silverImg = document.createElement("img");
+    silverImg.src = "img/silver.png";
+    silverImg.alt = "Pièce d'argent";
+
+    const totalCartText = document.createElement("span");
+    totalCartText.textContent = `TOTAL ECU `;
+    totalCartElement.appendChild(totalCartText);
+    const totalCartTextGold = document.createElement("span");
+    totalCartTextGold.textContent = `${totalWithTVA.toFixed(0)}`;
+    totalCartElement.appendChild(totalCartTextGold);
+    totalCartElement.appendChild(goldImg);
+
+    const totalCartTextsilver = document.createElement("span");
+    totalCartTextsilver.textContent = `${totalSilverWithTva.toFixed(0)}`;
+    totalCartElement.appendChild(totalCartTextsilver);
+    totalCartElement.appendChild(silverImg);
+
     const tvaElement = document.getElementById('total-taxe');
-    tvaElement.textContent = `TVA (13%) : ${tva.toFixed(2)} po`; // Affichage de la TVA avec 2 décimales
+    tvaElement.innerHTML = '';
 
-    // Insertion de la div après le total
+    const tvaText = document.createElement("span");
+    tvaText.textContent = `TVA (13%) : ${tva.toFixed(0)} Or et `;
+    tvaElement.appendChild(tvaText);
+
+    const tvaSilver = document.createElement("span");
+    tvaSilver.textContent = `${tvaSilverRest.toFixed(0)} Argent `;
+    tvaElement.appendChild(tvaSilver);
+
     totalCartElement.insertAdjacentElement('afterend', tvaElement);
 
-    // Afficher le nombre total d'articles
     const totalArticleElement = document.getElementById('total-article');
-    totalArticleElement.textContent = `Nombre total d'articles : ${totalQuantity}`;
+    if (totalArticleElement) {
+        totalArticleElement.textContent = `${totalQuantity} Article(s)`;
+    }
 }
 
-// Add quantity to cart
 function addPanier(article) {
     const cartList = document.getElementById('cart-list');
 
-    // Show items in cart
     const existingItem = cartList.querySelector(`[data-id="${article._id}"]`);
     if (existingItem) {
+
         const quantityDisplay = existingItem.querySelector('.quantity');
         const quantity = parseInt(quantityDisplay.textContent);
         const availableQuantity = parseInt(article.quantité);
         if (quantity < availableQuantity) {
             quantityDisplay.textContent = quantity + 1;
+
+            const remainingElement = document.querySelector(`.remaining[data-id="${article._id}"]`);
+            remainingElement.textContent = availableQuantity - (quantity + 1);
+
+            if (remainingElement.textContent <= 5) {
+                remainingElement.classList.add('low-stock');
+            } else {
+                remainingElement.classList.remove('low-stock');
+            }
+
             UpdateTotalCart();
         } else {
             alert("La quantité disponible pour cet article est épuisée.");
@@ -119,9 +159,16 @@ function addPanier(article) {
 
         const itemName = document.createElement('span');
         itemName.classList.add('article-name');
-        itemName.textContent = article.name + " - " + article.gold + " Or et " + article.silver + " Ar";
+        itemName.textContent = article.name;
 
-        // Adding data-gold and data-silver attributes to the list item
+        const coinMoney = document.getElementById('coinTemplate');
+        const itemPrice = document.importNode(coinMoney.content, true);
+
+        itemPrice.querySelector('.js-coin-gold').textContent = article.gold;
+        itemPrice.querySelector('.js-coin-gold-img').src = 'img/or.png';
+        itemPrice.querySelector('.js-coin-silver').textContent = article.silver;
+        itemPrice.querySelector('.js-coin-silver-img').src = 'img/silver.png';
+
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
 
@@ -129,50 +176,115 @@ function addPanier(article) {
         decreaseButton.textContent = "-";
         decreaseButton.classList.add('ico-moins');
         decreaseButton.addEventListener('click', function () {
-            decrease(listItem, article.gold, article.silver);
+            decrease(listItem);
         });
 
         const quantityDisplay = document.createElement('span');
         quantityDisplay.classList.add('quantity');
-        quantityDisplay.textContent = "1"; // Init to 1
+        quantityDisplay.textContent = "1";
 
         const increaseButton = document.createElement('button');
         increaseButton.textContent = "+";
         increaseButton.classList.add('ico-plus');
         increaseButton.addEventListener('click', function () {
-            increaseQuantity(listItem, article.quantité, article.gold, article.silver);
+            increaseQuantity(listItem, article.quantité);
+        });
+
+        const ArticleMoney = document.getElementById('articleTemplate');
+        const productArticle = document.importNode(ArticleMoney.content, true);
+        const recycleButton = productArticle.querySelector('.js-recyble-button');
+        recycleButton.addEventListener('click', function () {
+            removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
         });
 
         listItem.appendChild(itemName);
+        listItem.appendChild(itemPrice);
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
+        listItem.appendChild(recycleButton);
         cartList.appendChild(listItem);
 
-        UpdateTotalCart(); // Total Cart
-    }
-}
-
-// Dicrease quantity in panier
-function decrease(listItem) {
-    const quantityDisplay = listItem.querySelector('.quantity');
-    const quantity = parseInt(quantityDisplay.textContent);
-    if (quantity > 1) { // Not quantity negative
-        quantityDisplay.textContent = quantity - 1;
         UpdateTotalCart();
     }
 }
 
-// Add quantity in panier
+document.getElementById('clear-cart-button').addEventListener('click', function () {
+    clearCart();
+});
+
+
+function decrease(listItem) {
+    const quantityDisplay = listItem.querySelector('.quantity');
+    const quantity = parseInt(quantityDisplay.textContent);
+    const articleId = listItem.getAttribute('data-id');
+    const article = itemsData.find(item => item._id === articleId);
+    const availableQuantity = parseInt(article.quantité);
+
+    if (quantity > 1) {
+        quantityDisplay.textContent = quantity - 1;
+
+        const remainingElement = document.querySelector(`.remaining[data-id="${articleId}"]`);
+        remainingElement.textContent = availableQuantity + (quantity - 1);
+
+        if (remainingElement.textContent <= 5) {
+            remainingElement.classList.add('low-stock');
+        } else {
+            remainingElement.classList.remove('low-stock');
+        }
+
+        UpdateTotalCart();
+    } else {
+
+        listItem.parentNode.removeChild(listItem);
+
+        const remainingElement = document.querySelector(`.remaining[data-id="${articleId}"]`);
+        remainingElement.textContent = availableQuantity;
+
+        if (remainingElement.textContent <= 5) {
+            remainingElement.classList.add('low-stock');
+        } else {
+            remainingElement.classList.remove('low-stock');
+        }
+
+        UpdateTotalCart();
+    }
+}
+
+function clearCart() {
+    const cartList = document.getElementById('cart-list');
+    while (cartList.firstChild) {
+        cartList.removeChild(cartList.firstChild);
+    }
+    UpdateTotalCart();
+}
+
 function increaseQuantity(listItem, availableQuantity) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
+    const articleId = listItem.getAttribute('data-id');
+
     if (quantity < availableQuantity) {
         quantityDisplay.textContent = quantity + 1;
+
+        const remainingElement = document.querySelector(`.remaining[data-id="${articleId}"]`);
+        remainingElement.textContent = availableQuantity - (quantity + 1);
+
+        if (remainingElement.textContent <= 5) {
+            remainingElement.classList.add('low-stock');
+        } else {
+            remainingElement.classList.remove('low-stock');
+        }
+
         UpdateTotalCart();
     } else {
         alert("La quantité disponible pour cet article est épuisée.");
     }
+}
+
+function removeItemFromCart(itemToRemove) {
+    itemToRemove.remove();
+    UpdateTotalCart();
 }
 
 window.onload = loadItems;

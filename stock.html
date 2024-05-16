@@ -1,13 +1,156 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des stocks</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    
-    <script src="/js/data.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dracostore</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="shop-container">
+        <nav class="nav-container">
+          <ul>
+            <li>
+              <img class="nav-logo nav-img" src="img/logo.png" alt="logo" />
+            </li>
+            <li>
+              <a href="panier.html"
+                ><img class="nav-img1" src="img/icône caisse.svg" alt="panier"
+              /></a>
+            </li>
+            <li>
+              <a href="stock.html"
+                ><img
+                  class="nav-img2"
+                  src="img/ico╠éne stock avec fond.svg"
+                  alt="stock"
+              /></a>
+            </li>
+            <li>
+              <a href="client.html"
+                ><img
+                  class="nav-img3"
+                  src="img/icône historique.svg"
+                  alt="data"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="shop-card" id="item-container">
+          <!-- LIst of items -->
+          <template id="coinTemplate">
+            <li class="shop-card__coin">
+              <p class="js-coin-gold">0</p>
+              <img class="js-coin-gold-img" src="" alt="image de piece d'or" />
+              <p class="js-coin-silver">0</p>
+              <img
+                class="js-coin-silver-img"
+                src=""
+                alt="image de piece d'argent"
+              />
+            </li>
+          </template>
+        </div>
+
+        <div class="cart-container" id="cart">
+          <h1 class="cart-ttl">Modifier un produit</h1>
+
+          <form id="modify-product-form" class="product-form">
+            
+            <label for="product-name" ></label>
+            <select class="select-itm" id="product-name" name="product-name">
+              <!-- Remplissez les options avec les noms des produits existants -->
+            </select>
+            <br />
+
+            <label  for="product-price-gold" ></label>
+            <input class="product-price" placeholder="Prix du produit"
+              type="number"
+              id="product-price-gold"
+              name="product-price-gold"
+            />
+            <br />
+
+            <label for="product-price-silver"></label>
+            <input
+              type="number"
+              id="product-price-silver"
+              name="product-price-silver"
+            />
+            <br />
+
+            <label for="product-tva"></label>
+            <input class="product-tx" type="number" id="product-tva" name="product-tva" />
+            <br />
+
+            <label for="product-image">Image : </label>
+            <input type="text" id="product-image" name="product-image" />
+            <br />
+
+            <label for="product-quantity">Quantité en stock : </label>
+            <input
+              type="number"
+              id="product-quantity"
+              name="product-quantity"
+            />
+            <br />
+
+            <button type="submit">Modifier le produit</button>
+          </form>
+
+          <form id="create-product-form" class="product-form">
+            <h2>Créer un nouveau produit</h2>
+            <label for="new-product-name">Nom du produit : </label>
+            <input type="text" id="new-product-name" name="new-product-name" />
+            <br />
+
+            <label for="new-product-price-gold">Prix (Or) : </label>
+            <input
+              type="number"
+              id="new-product-price-gold"
+              name="new-product-price-gold"
+            />
+
+            <br />
+
+            <label for="new-product-price-silver">Prix (Argent) : </label>
+            <input
+              type="number"
+              id="new-product-price-silver"
+              name="new-product-price-silver"
+            />
+            <br />
+
+            <label for="new-product-tva">TVA : </label>
+            <input type="number" id="new-product-tva" name="new-product-tva" />
+            <br />
+
+            <label for="new-product-image">Image : </label>
+            <input
+              type="text"
+              id="new-product-image"
+              name="new-product-image"
+            />
+            <br />
+
+            <label for="new-product-quantity">Quantité en stock : </label>
+            <input
+              type="number"
+              id="new-product-quantity"
+              name="new-product-quantity"
+            />
+            <br />
+
+            <button type="submit">Créer le produit</button>
+          </form>
+
+          <img class="valid-logo" src="img/logo-nom.png" alt="" />
+        </div>
+      </div>
+    </main>
+    <script src="/js/stock.js"></script>
+  </body>
 </html>
