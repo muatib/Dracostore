@@ -112,7 +112,7 @@ function UpdateTotalCart() {
     // Mettre à jour l'affichage du nombre total d'articles
     const totalArticleElement = document.getElementById('total-article');
     if (totalArticleElement) {
-        totalArticleElement.textContent = `Nombre total d'articles : ${totalQuantity}`;
+        totalArticleElement.textContent = `${totalQuantity} Article(s)`;
     }
 }
 
@@ -139,6 +139,13 @@ function addPanier(article) {
         listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
 
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
+        const ArticleMoney = document.getElementById('articleTemplate');
+        const productArticle = document.importNode(ArticleMoney.content, true);
+        /////////////////////////
+
         // Créer un élément pour le nom de l'article
         const itemName = document.createElement('span');
         itemName.classList.add('article-name');
@@ -156,6 +163,15 @@ function addPanier(article) {
         // Ajouter les attributs data-gold et data-silver à l'élément de liste
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
+
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
+        const recycleButton = productArticle.querySelector('.js-recyble-button');
+        recycleButton.addEventListener('click', function () {
+            removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
+        });
+        /////////////////////////
 
         // Créer des éléments pour les boutons de quantité
         const decreaseButton = document.createElement('button');
@@ -182,6 +198,11 @@ function addPanier(article) {
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
+        listItem.appendChild(recycleButton);
+        /////////////////////////
 
         // Ajouter l'élément de liste à la liste du panier
         cartList.appendChild(listItem);
@@ -213,6 +234,12 @@ function increaseQuantity(listItem, availableQuantity) {
     } else {
         alert("La quantité disponible pour cet article est épuisée.");
     }
+}
+
+// Fonction pour supprimer un article du panier
+function removeItemFromCart(itemToRemove) {
+    itemToRemove.remove();
+    UpdateTotalCart();
 }
 
 window.onload = loadItems;

@@ -73,7 +73,7 @@ a {
 
 .article-li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .article-name {
@@ -208,7 +208,6 @@ html {
 .total-article {
   font-family: Montserrat;
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
 .nav-container {
@@ -336,6 +335,10 @@ html {
 
 .article-name {
   font-family: Montserrat;
+}
+
+.js-recyble-button {
+  margin-left: 1.5rem;
 }
 
 .total-money {
