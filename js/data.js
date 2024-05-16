@@ -1,4 +1,3 @@
-
 const itemsData = [];
 
 function loadItems() {
