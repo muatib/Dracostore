@@ -15,7 +15,7 @@
         <ul>
           <li><img class="nav-logo nav-img" src="/img/logo.png" alt="logo"></li>
           <li>
-            <a href=""><img class="nav-img1" src="/img/caissehover.jpg" alt="panier"></a>
+            <a href="/index.html"><img class="nav-img1" src="/img/ico╠éne caisse avec fond.svg" alt="panier"></a>
           </li>
           <li>
             <a href="/stock.html"><img class="nav-img2" src="/img/icône stock.svg" alt="stock"></a>
@@ -61,39 +61,38 @@
         <ul class="cart-lst" id="cart-list">
           <!-- list buy -->
         </ul>
-        <!--NOUVEAU-->
-        <template id="articleTemplate">
-          <li class="shop-card__coin">
-            <div class="js-recyble-button"><img src="img/recycle.png" alt=""></div>
-          </li>
-        </template>
-        <!--NOUVEAU-->
-        
-        <ul class="price-container">
+         <!--NOUVEAU-->
+         <template id="articleTemplate">
+            <li class="shop-card__coin">
+              <div class="js-recyble-button"><img src="img/recycle.png" alt=""></div>
+            </li>
+          </template>
           <!--NOUVEAU-->
-          <li>
-            <p class="total-article" id="total-article">Article(s) : <span>0</span></p> <!-- Ajout de cet élément -->
-          </li>
+  
+          <ul class="price-container">
+            <!--NOUVEAU-->
+            <li>
+              <p class="total-article" id="total-article">Article(s) : <span>0</span></p> <!-- Ajout de cet élément -->
+            </li>
+            <!--NOUVEAU-->
+            <li>
+              <div id="total-cart">TOTAL ECU</div>
+            </li>
+            <li>
+              <div id="total-taxe">dont TVA (13%)</div>
+            </li>
+            <li>
+              <p>Remise</p>
+            </li>
+          </ul>
           <!--NOUVEAU-->
-          <li>
-            <div id="total-cart">TOTAL</div>
-          </li>
-          <li>
-            <div id="total-taxe">dont TVA (13%)</div>
-          </li>
-          <li>
-            <p>Remise</p>
-          </li>
-        </ul>
-
-        <div class="valid-container cart-container-box">
-          <button class="valid-btn">valider le panier</button>
-          <img class="valid-img" src="/img/supprimer.png" alt="supprimer">
+          <div class="valid-container cart-container-box">
+            <button class="valid-btn">valider le panier</button>
+            <img id="clear-cart-button" class="valid-img" src="/img/supprimer.png" alt="supprimer">
+          </div>
+          <!--NOUVEAU-->
+          <img class="valid-logo" src="/img/logo-nom.png" alt="">
         </div>
-
-        <img class="valid-logo" src="/img/logo-nom.png" alt="">
-      </div>
-    </div>
   </main>
   <script src="js/data.js"></script>
 </body>
