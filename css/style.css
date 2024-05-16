@@ -341,6 +341,15 @@ html {
   margin-left: 1.5rem;
 }
 
+.article-remise {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-flex {
+  display: flex;
+}
+
 .total-money {
   font-family: Montserrat;
   font-size: 1.5rem;
@@ -395,4 +404,15 @@ html {
 
 .low-stock {
   background-color: #F69A60;
+}
+
+.select-itm {
+  width: 420px;
+  height: 59px;
+  margin-bottom: 0.75rem;
+}
+
+.product-price {
+  width: 420px;
+  height: 59px;
 }/*# sourceMappingURL=style.css.map */

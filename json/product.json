@@ -7,7 +7,7 @@
         "imageUrl": "img/bague-elfe.jpg",
         "description": "Bague elfe",
         "altTxt": "Bague elfe",
-        "quantité": "20"
+        "quantité": "15"
     },
     {
         "_id": "2",
@@ -17,7 +17,7 @@
         "imageUrl": "img/bague-templier.png",
         "description": "Bague Templier",
         "altTxt": "Bague Templier",
-        "quantité": "20"
+        "quantité": "15"
     },
     {
         "_id": "3",
@@ -37,7 +37,7 @@
         "imageUrl": "img/buste-odin.png",
         "description": "Buste d'Odin",
         "altTxt": "Buste d'Odin",
-        "quantité": "42"
+        "quantité": "15"
     },
     {
         "_id": "5",
@@ -47,7 +47,7 @@
         "imageUrl": "img/chandelle-grande.png",
         "description": "Grande chandelle",
         "altTxt": "Grande chandelle",
-        "quantité": "33"
+        "quantité": "15"
     },
     {
         "_id": "6",
@@ -57,7 +57,7 @@
         "imageUrl": "img/choppe-crane.png",
         "description": "Choppe en forme de crâne",
         "altTxt": "Choppe en forme de crâne",
-        "quantité": "9"
+        "quantité": "15"
     },
     {
         "_id": "7",
@@ -67,7 +67,7 @@
         "imageUrl": "img/coffret-dragon.png",
         "description": "Coffret dragon",
         "altTxt": "Coffret dragon",
-        "quantité": "38"
+        "quantité": "15"
     },
     {
         "_id": "8",
@@ -77,7 +77,7 @@
         "imageUrl": "img/dragonflight-earrings.png",
         "description": "Boucles d'Oreilles",
         "altTxt": "Boucles d'Oreilles",
-        "quantité": "13"
+        "quantité": "15"
     },
     {
         "_id": "9",
@@ -89,7 +89,7 @@
         "imageUrl": "img/elfe-licorne.png",
         "description": "Figurine elfe et sa licorne",
         "altTxt": "Figurine elfe et sa licorne",
-        "quantité": "28"
+        "quantité": "15"
     },
     {
         "_id": "10",
@@ -99,7 +99,7 @@
         "imageUrl": "img/horloge-dragon.png",
         "description": "Horloge dragon",
         "altTxt": "Horloge dragon",
-        "quantité": "5"
+        "quantité": "15"
     },
     {
         "_id": "11",
@@ -111,7 +111,7 @@
         "imageUrl": "img/oeil-dragon.png",
         "description": "Coffre à bijoux",
         "altTxt": "Coffre à bijoux",
-        "quantité": "17"
+        "quantité": "15"
     },
     {
         "_id": "12",
@@ -121,6 +121,6 @@
         "imageUrl": "img/pendentif-dragon.png",
         "description": "Pendentif dragon",
         "altTxt": "Pendentif dragon",
-        "quantité": "45"
+        "quantité": "15"
     }
 ]
