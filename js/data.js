@@ -139,9 +139,12 @@ function addPanier(article) {
         listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
 
-        //Article template
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
         const ArticleMoney = document.getElementById('articleTemplate');
         const productArticle = document.importNode(ArticleMoney.content, true);
+        /////////////////////////
 
         // Créer un élément pour le nom de l'article
         const itemName = document.createElement('span');
@@ -161,11 +164,14 @@ function addPanier(article) {
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
 
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
         const recycleButton = productArticle.querySelector('.js-recyble-button');
         recycleButton.addEventListener('click', function () {
             removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
         });
-
+        /////////////////////////
 
         // Créer des éléments pour les boutons de quantité
         const decreaseButton = document.createElement('button');
@@ -192,7 +198,11 @@ function addPanier(article) {
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
+        /////////////////////////
+        ////Create recyclebin////
+        /////////////////////////
         listItem.appendChild(recycleButton);
+        /////////////////////////
 
         // Ajouter l'élément de liste à la liste du panier
         cartList.appendChild(listItem);
