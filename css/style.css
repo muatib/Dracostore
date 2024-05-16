@@ -356,4 +356,20 @@ html {
   font-family: Montserrat;
   text-align: center;
   font-weight: bold;
+  margin-top: 1rem;
+}
+
+.total-taken {
+  width: 129px;
+  height: 80px;
+  background-color: var(--color1);
+}
+
+.total-taken-btn {
+  width: 285px;
+  height: 80px;
+  background-color: var(--color1);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
