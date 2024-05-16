@@ -130,12 +130,8 @@ function addPanier(article) {
         listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
 
-        /////////////////////////
-        ////Create recyclebin////
-        /////////////////////////
         const ArticleMoney = document.getElementById('articleTemplate');
         const productArticle = document.importNode(ArticleMoney.content, true);
-        /////////////////////////
 
         const itemName = document.createElement('span');
         itemName.classList.add('article-name');
@@ -152,21 +148,14 @@ function addPanier(article) {
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
 
-        /////////////////////////
-        ////Create recyclebin////
-        /////////////////////////
         const recycleButton = productArticle.querySelector('.js-recyble-button');
         recycleButton.addEventListener('click', function () {
             removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
         });
-        /////////////////////////
-        /////////////////////////
-        ////Clear articles list////
-        /////////////////////////
+
         document.getElementById('clear-cart-button').addEventListener('click', function () {
             clearCart();
         });
-        /////////////////////////
         const decreaseButton = document.createElement('button');
         decreaseButton.textContent = "-";
         decreaseButton.classList.add('ico-moins');
@@ -190,20 +179,14 @@ function addPanier(article) {
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
-        /////////////////////////
-        ////Create recyclebin////
-        /////////////////////////
         listItem.appendChild(recycleButton);
-        /////////////////////////
 
         cartList.appendChild(listItem);
 
         UpdateTotalCart();
     }
 }
-/////////////////////////
-////Clear Cart////
-/////////////////////////
+
 function clearCart() {
     const cartList = document.getElementById('cart-list');
     while (cartList.firstChild) {

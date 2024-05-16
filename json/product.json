@@ -21,7 +21,7 @@
     },
     {
         "_id": "3",
-        "name": "boussole",
+        "name": "Boussole",
         "gold": "18",
         "silver": "5",
         "imageUrl": "img/boussole.png",
@@ -81,7 +81,7 @@
     },
     {
         "_id": "9",
-        "name": "Figurine elfe et sa licorne",
+        "name": "Figurine elfe ",
         "gold": "22",
         "silver": "0",
         "imageGold": "img/or.svg",

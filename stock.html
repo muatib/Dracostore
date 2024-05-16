@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des stocks</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dracostore</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    
-    <script src="/js/data.js"></script>
+  <main>
+    <div class="shop-container">
+      <nav class="nav-container">
+        <ul>
+          <li><img class="nav-logo nav-img" src="/img/logo.png" alt="logo"></li>
+          <li>
+            <a href=""><img class="nav-img1" src="/img/icône caisse.svg" alt="panier"></a>
+          </li>
+          <li>
+            <a href="/stock.html"><img class="nav-img2" src="/img/ico╠éne stock avec fond.svg" alt="stock"></a>
+          </li>
+          <li>
+            <a href="/client.html"><img class="nav-img3" src="/img/icône historique.svg" alt="data"></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="shop-card" id="item-container">
+        <!-- LIst of items -->
+        <template id="coinTemplate">
+          <li class="shop-card__coin">
+            <p class="js-coin-gold">0</p>
+            <img class="js-coin-gold-img" src="" alt="image de piece d'or">
+            <p class="js-coin-silver">0</p>
+            <img class="js-coin-silver-img" src="" alt="image de piece d'argent">
+          </li>
+        </template>
+      </div>
+
+      <div class="cart-container" id="cart">
+        <h1 class="cart-ttl">Modifier un produit</h1>
+       
+
+        <img class="valid-logo" src="/img/logo-nom.png" alt="">
+      </div>
+    </div>
+  </main>
+  <script src="js/data.js"></script>
 </body>
+
 </html>
