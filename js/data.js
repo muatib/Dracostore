@@ -1,5 +1,7 @@
 const itemsData = [];
-
+/**
+ * 
+ */
 function loadItems() {
     fetch('json/product.json')
         .then(response => response.json())
@@ -109,17 +111,9 @@ function UpdateTotalCart() {
     const tvaElement = document.getElementById('total-taxe');
     tvaElement.innerHTML = '';
 
-
-
     const tvaText = document.createElement("span");
     tvaText.textContent = `TVA (13%) : ${tva.toFixed(0)} Or et `;
-
     tvaElement.appendChild(tvaText);
-    // const goldImgTva = document.createElement("img");
-    // goldImgTva.src = "img/or.png";
-    // goldImgTva.alt = "Or";
-    // goldImgTva.classList.add('total-gold-img');
-    // tvaElement.appendChild(goldImgTva);
 
     const tvaSilver = document.createElement("span");
     tvaSilver.textContent = `${tvaSilverRest.toFixed(0)} Argent `;
