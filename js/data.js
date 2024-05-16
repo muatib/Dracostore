@@ -1,3 +1,4 @@
+
 // Array Data JSON
 const itemsData = [];
 
@@ -116,36 +117,54 @@ function addPanier(article) {
         listItem.classList.add('article-li');
         listItem.setAttribute('data-id', article._id);
 
-        const itemName = document.createElement('span');
-        itemName.classList.add('article-name');
-        itemName.textContent = article.name + " - " + article.gold + " Or et " + article.silver + " Ar";
+        //Article template
+        const ArticleMoney = document.getElementById('articleTemplate');
+        const productArticle = document.importNode(ArticleMoney.content, true);
+        // itemName.textContent = article.name
+        productArticle.querySelector('.js-article-name').textContent = article.name;
+        productArticle.querySelector('.js-article-gold').textContent = article.gold;
+        productArticle.querySelector('.js-article-gold-img').src = 'img/or.png';
+        productArticle.querySelector('.js-article-silver').textContent = article.silver;
+        productArticle.querySelector('.js-article-silver-img').src = 'img/silver.png';
 
         // Adding data-gold and data-silver attributes to the list item
         listItem.setAttribute('data-gold', article.gold);
         listItem.setAttribute('data-silver', article.silver);
 
-        const decreaseButton = document.createElement('button');
-        decreaseButton.textContent = "-";
-        decreaseButton.classList.add('ico-moins');
+        // const decreaseButton = document.createElement('button');
+        const decreaseButton = productArticle.querySelector('.js-decrease-button');
+        // decreaseButton.textContent = "-";
+        // decreaseButton.classList.add('ico-moins');
         decreaseButton.addEventListener('click', function () {
             decrease(listItem, article.gold, article.silver);
         });
 
-        const quantityDisplay = document.createElement('span');
+        const quantityDisplay = productArticle.querySelector('.js-quantity-display');
         quantityDisplay.classList.add('quantity');
         quantityDisplay.textContent = "1"; // Init to 1
 
-        const increaseButton = document.createElement('button');
-        increaseButton.textContent = "+";
-        increaseButton.classList.add('ico-plus');
+        const increaseButton = productArticle.querySelector('.js-add-button');
+        // const increaseButton = document.createElement('button');
+        // increaseButton.textContent = "+";
+        // increaseButton.classList.add('ico-plus');
         increaseButton.addEventListener('click', function () {
             increaseQuantity(listItem, article.quantité, article.gold, article.silver);
         });
 
-        listItem.appendChild(itemName);
+        const recycleButton = productArticle.querySelector('.js-recyble-button');
+        // const increaseButton = document.createElement('button');
+        // increaseButton.textContent = "+";
+        // increaseButton.classList.add('ico-plus');
+        recycleButton.addEventListener('click', function () {
+            removeItemFromCart(listItem, article.quantité, article.gold, article.silver);
+        });
+
+        // listItem.appendChild(itemName);
+        listItem.appendChild(productArticle);
         listItem.appendChild(decreaseButton);
         listItem.appendChild(quantityDisplay);
         listItem.appendChild(increaseButton);
+        listItem.appendChild(recycleButton);
         cartList.appendChild(listItem);
 
         UpdateTotalCart(); // Total Cart
@@ -172,6 +191,12 @@ function increaseQuantity(listItem, availableQuantity) {
     } else {
         alert("La quantité disponible pour cet article est épuisée.");
     }
+}
+
+// Fonction pour supprimer un article du panier
+function removeItemFromCart(itemToRemove) {
+    itemToRemove.remove();
+    UpdateTotalCart();
 }
 
 window.onload = loadItems;

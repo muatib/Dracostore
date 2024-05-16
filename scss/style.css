@@ -171,6 +171,7 @@ html {
   display: flex;
   justify-content: left;
   align-items: center;
+  gap: 10px;
 }
 
 .remiseCoin {
@@ -189,6 +190,10 @@ html {
 
 .js-coin-silver-img {
   margin: 0 0.5rem 0 0.5rem;
+}
+
+.format-btn {
+  width: 10px;
 }
 
 .nav-container {

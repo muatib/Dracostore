@@ -1,13 +1,13 @@
 html {
   background-color: var(--color2);
 }
+
 .shop-container {
   display: grid;
   grid-template-columns: 118px auto 509px;
 }
 
 .shop-card {
- 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,43 +15,41 @@ html {
   background-color: var(--color2);
   margin: 3rem;
 }
+
 .price {
-  // font-weight: bold;
   font-family: Montserrat;
-  // font-size: 0.5rem;
 }
 
 .item {
-  // text-align: center;
   position: relative;
 }
 
-.item > img {
+.item>img {
   width: 330px;
   height: 331px;
   border-radius: 20px;
 }
 
 .item .name,
-.item .price,
-.item .remaining {
+.item .price {
   position: absolute;
   bottom: 0;
   left: 55%;
   transform: translateX(-50%);
-  border-radius: 20px;
   height: 5rem;
   width: 20.625rem;
   margin-bottom: 1.5rem;
   color: var(--color6);
-  
 }
-.name{
+
+.name {
   font-size: 1.75rem;
 }
-  .price{
-    font-size: 1rem;
-  }
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 .item .price {
   bottom: -30px;
@@ -62,24 +60,55 @@ html {
   left: 80%;
   width: 51px;
   height: 37px;
-  background-color: #30303C;
-}
-.remaining{
-  text-align: center;
 }
 
-//NOUVEAU
-.shop-card__coin{
+.remaining {
+  font-family: Montserrat;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #30303c62;
+  color: var(--color1);
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 20.625rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.shop-card__coin {
   display: flex;
   justify-content: left;
   align-items: center;
+  gap: 10px;
 }
-.remiseCoin{
+
+.remiseCoin {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.remiseCoin-img{
+
+.remiseCoin-img {
   margin: 0 20px;
 }
-//NOUVEAU
+
+.js-coin-gold-img {
+  margin: 0 0.5rem 0 0.5rem;
+
+}
+
+.js-coin-silver-img {
+  margin: 0 0.5rem 0 0.5rem;
+
+}
+
+.format-btn{
+  width: 10px;
+}
