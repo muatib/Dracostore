@@ -23,9 +23,17 @@ function UpdateTotalCart() {
     const totalCartElement = document.getElementById('total-cart');
     totalCartElement.innerHTML = '';
 
+    
+    ////////////////
+    ///Correction///
+    ////////////////
+    const tva = totalAmount * 0.13;
+    const totalWithTVA = totalAmount + tva;
+
     const totalCartText = document.createElement("span");
-    totalCartText.textContent = `TOTAL : ${totalAmount.toFixed(2)} `;
+    totalCartText.textContent = `TOTAL : ${totalWithTVA.toFixed(2)} `;
     totalCartElement.appendChild(totalCartText);
+    ////////////////
 
     const goldImg = document.createElement("img");
     goldImg.src = "img/or.png";
@@ -38,8 +46,6 @@ function UpdateTotalCart() {
     silverImg.alt = "Ar";
     totalCartElement.appendChild(silverImg);
 
-    const tva = totalAmount * 0.13;
-    const totalWithTVA = totalAmount + tva;
 
     const tvaElement = document.getElementById('total-taxe');
     tvaElement.innerHTML = '';
