@@ -56,6 +56,7 @@
   margin-top: 1rem;
   border: black 3px solid;
 }
+
 .valid-container {
   display: flex;
   align-items: center;
@@ -88,8 +89,25 @@
   line-height: 2rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  
 }
-.article-name{
+.article-name {
   font-family: Montserrat;
+}
+.total-money {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  width: 426px;
+  height: 80px;
+  background-color: var(--color2);
+  color: white;
+  line-height: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.drink-txt{
+  font-size: 1.5rem;
+  font-family: Montserrat;
+  text-align: center;
+  font-weight: bold;
 }

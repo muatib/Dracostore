@@ -157,7 +157,7 @@ html {
   font-size: 1rem;
   text-align: center;
   border-radius: 10px;
-  background-color: rgba(48, 48, 60, 0.3843137255);
+  background-color: #828179;
   color: var(--color1);
   position: absolute;
   bottom: 0;
@@ -336,4 +336,24 @@ html {
 
 .article-name {
   font-family: Montserrat;
+}
+
+.total-money {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  width: 426px;
+  height: 80px;
+  background-color: var(--color2);
+  color: white;
+  line-height: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.drink-txt {
+  font-size: 1.5rem;
+  font-family: Montserrat;
+  text-align: center;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
