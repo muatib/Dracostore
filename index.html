@@ -11,32 +11,50 @@
 <body>
   <main>
     <div class="shop-container">
-      <nav class="nav-container">
-        <ul>
-          <li><img class="nav-logo nav-img" src="/img/logo.png" alt="logo"></li>
-          <li>
-            <a href="/index.html"><img class="nav-img1" src="/img/ico╠éne caisse avec fond.svg" alt="panier"></a>
-          </li>
-          <li>
-            <a href="/stock.html"><img class="nav-img2" src="/img/icône stock.svg" alt="stock"></a>
-          </li>
-          <li>
-            <a href="/client.html"><img class="nav-img3" src="/img/icône historique.svg" alt="data"></a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav-container">
+          <ul>
+            <li>
+              <img class="nav-logo nav-img" src="img/logo.png" alt="logo" />
+            </li>
+            <li>
+              <a href="index.html"
+                ><img class="nav-img1" src="/img/ico╠éne caisse avec fond.svg" alt="panier"
+              /></a>
+            </li>
+            <li>
+              <a href="stock.html"
+                ><img
+                  class="nav-img2"
+                  src="/img/icône stock.svg"
+                  alt="stock"
+              /></a>
+            </li>
+            <li>
+              <a href="client.html"
+                ><img
+                  class="nav-img3"
+                  src="img/icône historique.svg"
+                  alt="data"
+              /></a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="shop-card" id="item-container">
-        <!-- LIst of items -->
-        <template id="coinTemplate">
-          <li class="shop-card__coin">
-            <p class="js-coin-gold">0</p>
-            <img class="js-coin-gold-img" src="" alt="image de piece d'or">
-            <p class="js-coin-silver">0</p>
-            <img class="js-coin-silver-img" src="" alt="image de piece d'argent">
-          </li>
-        </template>
-      </div>
+        <div class="shop-card" id="item-container">
+          <!-- LIst of items -->
+          <template id="coinTemplate">
+            <li class="shop-card__coin">
+              <p class="js-coin-gold">0</p>
+              <img class="js-coin-gold-img" src="" alt="image de piece d'or" />
+              <p class="js-coin-silver">0</p>
+              <img
+                class="js-coin-silver-img"
+                src=""
+                alt="image de piece d'argent"
+              />
+            </li>
+          </template>
+        </div>
 
       <div class="cart-container" id="cart">
         <h1 class="cart-ttl">Informations clients</h1>
@@ -61,38 +79,39 @@
         <ul class="cart-lst" id="cart-list">
           <!-- list buy -->
         </ul>
-         <!--NOUVEAU-->
-         <template id="articleTemplate">
-            <li class="shop-card__coin">
-              <div class="js-recyble-button"><img src="img/recycle.png" alt=""></div>
-            </li>
-          </template>
+        <!--NOUVEAU-->
+        <template id="articleTemplate">
+          <li class="shop-card__coin">
+            <div class="js-recyble-button"><img src="img/recycle.png" alt=""></div>
+          </li>
+        </template>
+        <!--NOUVEAU-->
+        
+        <ul class="price-container">
           <!--NOUVEAU-->
-  
-          <ul class="price-container">
-            <!--NOUVEAU-->
-            <li>
-              <p class="total-article" id="total-article">Article(s) : <span>0</span></p> <!-- Ajout de cet élément -->
-            </li>
-            <!--NOUVEAU-->
-            <li>
-              <div id="total-cart">TOTAL ECU</div>
-            </li>
-            <li>
-              <div id="total-taxe">dont TVA (13%)</div>
-            </li>
-            <li>
-              <p>Remise</p>
-            </li>
-          </ul>
+          <li>
+            <p class="total-article" id="total-article">Article(s) : <span>0</span></p> <!-- Ajout de cet élément -->
+          </li>
           <!--NOUVEAU-->
-          <div class="valid-container cart-container-box">
-            <button class="valid-btn">valider le panier</button>
-            <img id="clear-cart-button" class="valid-img" src="/img/supprimer.png" alt="supprimer">
-          </div>
-          <!--NOUVEAU-->
-          <img class="valid-logo" src="/img/logo-nom.png" alt="">
+          <li>
+            <div id="total-cart">TOTAL</div>
+          </li>
+          <li>
+            <div id="total-taxe">dont TVA (13%)</div>
+          </li>
+          <li>
+            <p>Remise</p>
+          </li>
+        </ul>
+
+        <div class="valid-container cart-container-box">
+          <button class="valid-btn">valider le panier</button>
+          <img class="valid-img" src="/img/supprimer.png" alt="supprimer">
         </div>
+
+        <img class="valid-logo" src="/img/logo-nom.png" alt="">
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
 </body>

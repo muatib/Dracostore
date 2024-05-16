@@ -30,3 +30,21 @@
     text-transform: uppercase;
     margin-left: 0.5rem;
   }
+  .product-form {
+    margin-bottom: 20px;
+  }
+  
+  .product-form label,
+  .product-form input,
+  .product-form select,
+  .product-form button {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .product-form br {
+    margin-bottom: 10px;
+  }
+  .low-stock {
+    background-color: #F69A60;
+  }
