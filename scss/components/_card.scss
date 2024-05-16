@@ -41,10 +41,13 @@ html {
   margin-bottom: 1.5rem;
   margin-left: 0.5rem;
   color: var(--color6);
+  
 }
 
 .name {
   font-size: 1.75rem;
+  line-height: 1rem;
+  text-align: left;
 }
 
 .price {
@@ -87,7 +90,9 @@ html {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 10px;
+  // gap: 10px;
+  margin-right: 2rem;
+
 }
 
 .remiseCoin {
@@ -112,4 +117,13 @@ html {
 
 .format-btn{
   width: 10px;
+}
+.js-coin-gold,
+.js-coin-silver{
+  font-family: Montserrat;
+}
+.total-article{
+  font-family: Montserrat;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }

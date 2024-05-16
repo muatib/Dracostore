@@ -82,6 +82,7 @@ a {
 
 .quantity {
   margin: 0 1rem;
+  font-family: Montserrat;
 }
 
 html {
@@ -131,6 +132,8 @@ html {
 
 .name {
   font-size: 1.75rem;
+  line-height: 1rem;
+  text-align: left;
 }
 
 .price {
@@ -172,6 +175,7 @@ html {
   display: flex;
   justify-content: left;
   align-items: center;
+  margin-right: 2rem;
 }
 
 .remiseCoin {
@@ -190,6 +194,21 @@ html {
 
 .js-coin-silver-img {
   margin: 0 0.5rem 0 0.5rem;
+}
+
+.format-btn {
+  width: 10px;
+}
+
+.js-coin-gold,
+.js-coin-silver {
+  font-family: Montserrat;
+}
+
+.total-article {
+  font-family: Montserrat;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .nav-container {
