@@ -1,6 +1,7 @@
 const itemsData = [];
+
 /**
- * 
+ * Get database in json with fetch 
  */
 function loadItems() {
     fetch('json/product.json')
@@ -58,6 +59,10 @@ function loadItems() {
         .catch(error => console.error('Erreur lors du chargement des articles :', error));
 }
 
+/**
+ * Update total silver and gold money with quantity present in json array
+ * @returns {number} - quantity in json array
+ */
 function UpdateTotalCart() {
     const cartList = document.getElementById('cart-list');
     const items = cartList.getElementsByClassName('article-li');
@@ -127,6 +132,10 @@ function UpdateTotalCart() {
     }
 }
 
+/**
+ * Get quantity and value in json array
+ * @param {*} article In json array
+ */
 function addPanier(article) {
     const cartList = document.getElementById('cart-list');
 
@@ -213,7 +222,10 @@ document.getElementById('clear-cart-button').addEventListener('click', function 
     clearCart();
 });
 
-
+/**
+ * Decrease quantity in listitem in array json
+ * @param {*} listItem array json
+ */
 function decrease(listItem) {
     const quantityDisplay = listItem.querySelector('.quantity');
     const quantity = parseInt(quantityDisplay.textContent);
@@ -250,7 +262,9 @@ function decrease(listItem) {
         UpdateTotalCart();
     }
 }
-
+ /**
+  * Remove item list
+  */
 function clearCart() {
     const cartList = document.getElementById('cart-list');
     while (cartList.firstChild) {
@@ -281,7 +295,10 @@ function increaseQuantity(listItem, availableQuantity) {
         alert("La quantité disponible pour cet article est épuisée.");
     }
 }
-
+/**
+ * Remove item
+ * @param {*} itemToRemove no comment
+ */
 function removeItemFromCart(itemToRemove) {
     itemToRemove.remove();
     UpdateTotalCart();
