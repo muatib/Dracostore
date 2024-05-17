@@ -210,12 +210,45 @@ html {
   font-size: 1rem;
 }
 
+.alert-container {
+  background-color: var(--color3);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 887px;
+  position: fixed;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 3s ease;
+}
+
+.alert-txt {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.pop-hide {
+  opacity: 0;
+  display: none;
+}
+
+.pop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-10px);
+}
+
 .nav-container {
   background-color: var(--color1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1024px;
   position: sticky;
   top: 0;
 }
@@ -235,7 +268,6 @@ html {
 
 .cart-container {
   padding: 42px;
-  height: 1024px;
   background-color: var(--color1);
   position: sticky;
   top: 0;
@@ -319,7 +351,7 @@ html {
 .valid-logo {
   width: 265px;
   height: 80px;
-  margin: 3rem 0 0 6rem;
+  margin: 3rem 0 0 5.5rem;
 }
 
 .price-container {
